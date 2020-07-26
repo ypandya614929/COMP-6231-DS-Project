@@ -18,7 +18,7 @@ import constants.Constants;
 import model.Administrator;
 import model.Player;
 
-import java.util.concurrent.ConcurrentHashMap; 
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**

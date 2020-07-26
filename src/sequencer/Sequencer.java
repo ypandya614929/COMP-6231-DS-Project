@@ -54,6 +54,7 @@ public class Sequencer {
 				InetAddress ia = InetAddress.getByName(Constants.MULTICAST_IP);
 				byte[] msg = dpData.getBytes();
 				new DatagramSocket().send(new DatagramPacket(msg, msg.length, ia, port));
+			
 			}
 			
 		} catch (SocketException e) {
