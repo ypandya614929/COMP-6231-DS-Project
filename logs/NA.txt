@@ -1,0 +1,36 @@
+Jul 26, 2020 3:30:29 AM server.NAServer addLog
+INFO: 
+Jul 26, 2020 3:30:29 AM server.NAServer serverConnection
+INFO: North American Server Started
+Jul 26, 2020 3:30:50 AM server.NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 26, 2020 3:30:50 AM server.NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Jul 26, 2020 3:31:04 AM server.NAServer createPlayerAccount
+INFO: IP : 132.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Jul 26, 2020 3:31:04 AM server.NAServer createPlayerAccount
+INFO: IP : 132.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
+Jul 26, 2020 3:31:14 AM server.NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, start playerSignIn() operation.
+Jul 26, 2020 3:31:14 AM server.NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, Result playerSignIn() : Player sign in successfully
+Jul 26, 2020 3:31:43 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 26, 2020 3:31:43 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 1 online , 0 offline. 
+Jul 26, 2020 3:31:59 AM server.NAServer playerSignOut
+INFO: IP : 132.123.123.123, username : ypandya, start playerSignOut() operation.
+Jul 26, 2020 3:31:59 AM server.NAServer playerSignOut
+INFO: IP : 132.123.123.123, username : ypandya, Result playerSignOut() : Player sign out successfully
+Jul 26, 2020 3:32:25 AM server.NAServer transferAccount
+INFO: IP : 132.123.123.123, username : ypandya, start transferAccount() operation.
+Jul 26, 2020 3:32:25 AM server.NAServer transferAccount
+INFO: IP : 132.123.123.123, username : ypandya, Result transferAccount() : Player account (ypandya) is transfered from 132.123.123.123 to 93.321.321.321
+Jul 26, 2020 3:32:38 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 26, 2020 3:32:38 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Jul 26, 2020 3:34:55 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 26, 2020 3:34:55 AM server.NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 

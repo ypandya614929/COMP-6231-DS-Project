@@ -1,0 +1,23 @@
+module DPSSCorba {
+
+	interface DPSSInterface {
+		
+		// AdminInterface corba idl methods
+		
+		string getPlayerStatus(in string userName, in string password, in string ipAddress);
+		
+		string suspendAccount(in string AdminUsername, in string AdminPassword, in string AdminIP, in string UsernameToSuspend);
+		
+		// PlayerInterface corba idl methods
+		
+		string createPlayerAccount(in string firstName, in string lastName, in string age, in string userName, in string password, in string ipAddress);
+		
+		string playerSignIn(in string userName, in string password, in string ipAddress);
+		
+		string playerSignOut(in string userName, in string ipAddress);
+		
+		string transferAccount(in string userName, in string password, in string OldIPAddress, in string NewIPAddress);
+	
+	};
+
+};
