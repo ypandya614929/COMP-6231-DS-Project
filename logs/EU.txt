@@ -1,4 +1,5 @@
-Jul 26, 2020 3:30:29 AM server.EUServer addLog
+Jul 26, 2020 6:19:08 PM server.EUServer addLog
+INFO: Jul 26, 2020 3:30:29 AM server.EUServer addLog
 INFO: 
 Jul 26, 2020 3:30:29 AM server.EUServer serverConnection
 INFO: European Server Started
@@ -30,3 +31,10 @@ Jul 26, 2020 3:34:55 AM server.EUServer getUDPPlayerStatus
 INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
 Jul 26, 2020 3:34:55 AM server.EUServer getUDPPlayerStatus
 INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
+
+Jul 26, 2020 6:19:08 PM server.EUServer serverConnection
+INFO: European Server Started
+Jul 26, 2020 6:19:43 PM server.EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 26, 2020 6:19:43 PM server.EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 

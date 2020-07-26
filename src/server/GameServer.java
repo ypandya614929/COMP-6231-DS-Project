@@ -10,8 +10,8 @@ import org.omg.CosNaming.NamingContextExtHelper;
 import org.omg.PortableServer.POA;
 import org.omg.PortableServer.POAHelper;
 
-import DPSSCorba.DPSSInterface;
-import DPSSCorba.DPSSInterfaceHelper;
+import FECorba.FrontendInterface;
+import FECorba.FrontendInterfaceHelper;
 import frontend.FrontendImplementation;
 import sequencer.Sequencer;
 
@@ -45,7 +45,7 @@ public class GameServer {
 			frontendImplementation.setORB(orb);
 			
 			org.omg.CORBA.Object refFE = rootpoa.servant_to_reference(frontendImplementation);
-			DPSSInterface hrefFE = DPSSInterfaceHelper.narrow(refFE);
+			FrontendInterface hrefFE = FrontendInterfaceHelper.narrow(refFE);
 			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
 			
 			NamingContextExt ncRefFE = NamingContextExtHelper.narrow(objRef);
@@ -69,10 +69,8 @@ public class GameServer {
             new EUServer();
 			new ASServer();
 			new NAServer();
-			System.out.println("Server(s) started.");
 			
 			new Sequencer().startSequencer();
-			System.out.println("Sequencer Started");
 			
 			orb.run();		
 		

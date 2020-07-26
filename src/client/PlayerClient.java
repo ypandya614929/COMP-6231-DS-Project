@@ -22,8 +22,8 @@ import org.omg.CosNaming.NamingContextPackage.InvalidName;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.omg.CORBA.ORB;
 
-import DPSSCorba.DPSSInterface;
-import DPSSCorba.DPSSInterfaceHelper;
+import FECorba.FrontendInterface;
+import FECorba.FrontendInterfaceHelper;
 
 /**
  *
@@ -35,7 +35,7 @@ public class PlayerClient {
 	 * This is the player user class containing player user operations
 	 */
 
-	static DPSSInterface playerObj;
+	static FrontendInterface playerObj;
 	static BufferedReader br;
 	private static Logger logger;
 	static NamingContextExt ncRef;
@@ -593,8 +593,8 @@ public class PlayerClient {
 	 * @throws CannotProceed 
 	 * @throws NotFound 
 	 */
-	public static DPSSInterface createPlayerObject() throws NotFound, CannotProceed, InvalidName {
-		return DPSSInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
+	public static FrontendInterface createPlayerObject() throws NotFound, CannotProceed, InvalidName {
+		return FrontendInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
 	}
 }
 	

@@ -22,8 +22,8 @@ import org.omg.CosNaming.NamingContextPackage.InvalidName;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.omg.CORBA.ORB;
 
-import DPSSCorba.DPSSInterface;
-import DPSSCorba.DPSSInterfaceHelper;
+import FECorba.FrontendInterface;
+import FECorba.FrontendInterfaceHelper;
 
 /**
  *
@@ -34,7 +34,7 @@ public class AdministratorClient {
 	/**
 	 * This is the admin user class containing admin user operations
 	 */
-	static DPSSInterface adminObj;
+	static FrontendInterface adminObj;
 	static BufferedReader br;
 	static NamingContextExt ncRef;
 	private static Logger logger;
@@ -354,8 +354,8 @@ public class AdministratorClient {
 	 * @throws CannotProceed 
 	 * @throws NotFound 
 	 */
-	public static DPSSInterface createAdminObject() throws NotFound, CannotProceed, InvalidName {
-		return DPSSInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
+	public static FrontendInterface createAdminObject() throws NotFound, CannotProceed, InvalidName {
+		return FrontendInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
 	}
 }
 	

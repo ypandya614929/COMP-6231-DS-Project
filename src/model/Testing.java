@@ -12,12 +12,12 @@ import org.omg.CosNaming.NamingContextExtHelper;
 import org.omg.CosNaming.NamingContextPackage.CannotProceed;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 
-import DPSSCorba.DPSSInterface;
-import DPSSCorba.DPSSInterfaceHelper;
+import FECorba.FrontendInterface;
+import FECorba.FrontendInterfaceHelper;
 
 public class Testing extends Thread {
 	
-	public static DPSSInterface conObj;
+	public static FrontendInterface conObj;
 	public static ORB orb;
 	public static NamingContextExt ncRef;
 	
@@ -133,15 +133,15 @@ public class Testing extends Thread {
 		System.out.println("Method : suspendAccount() , " + conObj.suspendAccount("Admin", "Admin", "93.123.123.123", "testuserdata1"));
 	}
 	
-	public static DPSSInterface createAdminObject(String ip) throws NotFound, CannotProceed, InvalidName, org.omg.CosNaming.NamingContextPackage.InvalidName  {
+	public static FrontendInterface createAdminObject(String ip) throws NotFound, CannotProceed, InvalidName, org.omg.CosNaming.NamingContextPackage.InvalidName  {
 		if (ip.startsWith("132")) {
-			return DPSSInterfaceHelper.narrow(ncRef.resolve_str("NA"));
+			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("NA"));
 		} 
 		else if (ip.startsWith("93")) {
-			return DPSSInterfaceHelper.narrow(ncRef.resolve_str("EU"));
+			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("EU"));
 		} 
 		else if (ip.startsWith("182")) {
-			return DPSSInterfaceHelper.narrow(ncRef.resolve_str("AS"));
+			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("AS"));
 		}
 		return null;
 	}

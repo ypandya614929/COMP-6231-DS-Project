@@ -20,12 +20,12 @@ import org.omg.CORBA.ORB;
 
 import constants.Constants;
 
-import DPSSCorba.DPSSInterfacePOA;
+import FECorba.FrontendInterfacePOA;
 /**
  * @author ypandya
  *
  */
-public class FrontendImplementation extends DPSSInterfacePOA {
+public class FrontendImplementation extends FrontendInterfacePOA {
 	
 	private ORB orb;
 	

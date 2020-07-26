@@ -17,7 +17,7 @@ import java.util.logging.SimpleFormatter;
 
 import constants.Constants;
 
-import DPSSCorba.DPSSInterface;
+import FECorba.FrontendInterface;
 /**
  * @author ypandya
  *
@@ -25,7 +25,7 @@ import DPSSCorba.DPSSInterface;
 public class Sequencer {
 	
 	static long count = 1;
-	static DPSSInterface sequencerObj;
+	static FrontendInterface sequencerObj;
 	static Logger logger;
 	
 	public void startSequencer() {
