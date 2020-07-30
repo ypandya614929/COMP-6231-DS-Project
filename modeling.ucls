@@ -64,7 +64,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="server.ASServer" project="DSD" file="/DSD/src/server/ASServer.java" binary="false" 
+  <class id="8" language="java" name="RM1Server.RM1ASServer" project="DSD" file="/DSD/src/RM1Server/ASServer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="806" y="437"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -73,7 +73,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="server.EUServer" project="DSD" file="/DSD/src/server/EUServer.java" binary="false" 
+  <class id="9" language="java" name="RM1Server.RM1EUServer" project="DSD" file="/DSD/src/RM1Server/EUServer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="555" y="424"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -82,7 +82,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="server.NAServeroject="DSD" file="/DSD/src/server/NAServer.java" 
+  <class id="10" language="java" name="RM1Server.NAServeroject="DSD" file="/DSD/src/RM1Server/NAServer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="171" y="364"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -91,7 +91,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="server.GameServer" project="DSD" file="/DSD/src/server/GameServer.java" 
+  <class id="11" language="java" name="RM1Server.RM1GameServer" project="DSD" file="/DSD/src/RM1Server/GameServer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1279" y="429"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -1,12 +1,5 @@
-/.DS_Store
-/DPSSCorba/
-/client/
-/controller/
-/data.txt
-/model/
-/server/
-/FECorba/
-/constants/
+/RM1Server/
+/RM3Server/
+/Runserver/
 /frontend/
-/locks/
-/sequencer/
+/model/

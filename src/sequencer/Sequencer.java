@@ -11,6 +11,8 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
@@ -27,6 +29,7 @@ public class Sequencer {
 	static long count = 1;
 	static FrontendInterface sequencerObj;
 	static Logger logger;
+	static final int Threads = 3;
 	
 	public void startSequencer() {
 		
@@ -36,7 +39,7 @@ public class Sequencer {
 			
 			addLog("logs/sequencer.txt", "Sequencer");
 			ds = new DatagramSocket(Constants.SEQUENCER_PORT);
-
+			
 			logger.info("Sequencer Started");
 			while (true) {
 				
@@ -47,13 +50,18 @@ public class Sequencer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String ip = data1[1];
-				int port = getServerPort(ip);
 				String dpData = new String(data).trim();
 				logger.info("Sequencer Data : " + dpData);
 				count++;
-				InetAddress ia = InetAddress.getByName(Constants.MULTICAST_IP);
 				byte[] msg = dpData.getBytes();
-				new DatagramSocket().send(new DatagramPacket(msg, msg.length, ia, port));
+				
+				ExecutorService executor = Executors.newFixedThreadPool(Threads);
+				for (int i = 1; i <= Threads; i++) {
+					int port = getServerPort(ip, i);
+					Runnable task = new MyRMThreads(msg, port);
+					executor.execute(task);
+				}
+				executor.shutdown();
 			
 			}
 			
@@ -76,18 +84,43 @@ public class Sequencer {
 	 * @param ip new ip of transfer account
 	 * @return ip
 	 */
-	public static int getServerPort(String ip) {
+	public static int getServerPort(String ip, int rm_num) {
 		if (ip.startsWith("132")) {
-			return Constants.NA_SERVER_PORT;
+			if (rm_num == 1) {
+				return Constants.RM1_NA_SERVER_PORT;
+			}
+			if (rm_num == 2) {
+				return Constants.RM2_NA_SERVER_PORT;
+			}
+			if (rm_num == 3) {
+				return Constants.RM3_NA_SERVER_PORT;
+			}
 		}
 		else if (ip.startsWith("93")) {
-			return Constants.EU_SERVER_PORT;
+			if (rm_num == 1) {
+				return Constants.RM1_EU_SERVER_PORT;
+			}
+			if (rm_num == 2) {
+				return Constants.RM2_EU_SERVER_PORT;
+			}
+			if (rm_num == 3) {
+				return Constants.RM3_EU_SERVER_PORT;
+			}
 		}
 		else if (ip.startsWith("182")) {
-			return Constants.AS_SERVER_PORT;
+			if (rm_num == 1) {
+				return Constants.RM1_AS_SERVER_PORT;
+			}
+			if (rm_num == 2) {
+				return Constants.RM2_AS_SERVER_PORT;
+			}
+			if (rm_num == 3) {
+				return Constants.RM3_AS_SERVER_PORT;
+			}
 		}
 		return 0;	
 	}
+	
 	
 	/**
 	 * This method is used to set/update logger
@@ -121,5 +154,26 @@ public class Sequencer {
 			logger.info("Unable to create file, please check file permission.");
 		}
 	}
-	
+}
+
+class MyRMThreads implements Runnable {
+		
+	private final byte[] msg;
+	private final int port;
+ 
+	MyRMThreads(byte[] msg, int port) {
+		this.msg = msg;
+		this.port = port;
+	}
+ 
+	@Override
+	public void run() {
+ 
+		try {
+			InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
+			new DatagramSocket().send(new DatagramPacket(this.msg, this.msg.length, ia, this.port));
+		} catch (Exception e) {
+ 			e.printStackTrace();
+		}
+	}
 }

@@ -167,6 +167,64 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 		
 	}
 	
+	public void RM2Response() throws SocketException {
+		
+		DatagramSocket ds = null;
+		try {
+			
+			ds = new DatagramSocket(Constants.RM2_FRONTEND_PORT);
+			while (true) {
+				
+				byte[] res = new byte[Constants.BYTE_LENGTH];
+				DatagramPacket request = new DatagramPacket(res, res.length);
+				ds.receive(request);
+				RM2_response = new String(request.getData());
+				if (!RM2_response.isEmpty()) {
+					logger.info("RM 2 : " + RM2_response);
+				}
+			}
+			
+		} catch (SocketException e) {
+			logger.info(e.getMessage());
+		} catch (UnknownHostException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void RM3Response() throws SocketException {
+		
+		DatagramSocket ds = null;
+		try {
+			
+			ds = new DatagramSocket(Constants.RM3_FRONTEND_PORT);
+			while (true) {
+				
+				byte[] res = new byte[Constants.BYTE_LENGTH];
+				DatagramPacket request = new DatagramPacket(res, res.length);
+				ds.receive(request);
+				RM3_response = new String(request.getData());
+				if (!RM3_response.isEmpty()) {
+					logger.info("RM 3 : " + RM3_response);
+				}
+			}
+			
+		} catch (SocketException e) {
+			logger.info(e.getMessage());
+		} catch (UnknownHostException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public void sendRequest(String message) {
 		DatagramSocket ds = null;
 		try {
@@ -187,7 +245,58 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 	}
 	
 	public String receiveResponse() {
+		if (RM1_response.trim().equals(RM2_response.trim())
+				&& RM2_response.trim().equals(RM3_response.trim())) {
+			return RM1_response;
+		} else if (RM1_response.trim().equals(RM2_response.trim())) {
+			if (!RM3_response.equals("Server crashed")) {
+				RM3_COUNT++;
+				System.out.println(" RM3_COUNT " + RM3_COUNT);
+				if (RM3_COUNT == 3) {
+					logger.info("FRONTEND : RM1 sending to RM3");
+					multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM3_ID);
+					RM3_COUNT = 0;
+				}
+			}
+			return RM1_response;
+		} else if (RM1_response.trim().equals(RM3_response.trim())) {
+			RM2_COUNT++;
+			if (RM2_COUNT == 3) {
+				logger.info("FRONTEND : RM1 sending to RM2");
+				multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM2_ID);
+				RM2_COUNT = 0;
+			}
+			return RM1_response;
+		} else if (RM2_response.trim().equals(RM3_response.trim())) {
+			RM1_COUNT++;
+			if (RM1_COUNT == 3) {
+				logger.info("RM2 sending to RM1");
+				multicastFailtoRM("Server defect", Constants.RM2_ID, Constants.RM1_ID);
+				RM1_COUNT = 0;
+			}
+			return RM2_response;
+		}
 		return RM1_response;
+	}
+	
+	public void multicastFailtoRM(String message, String id1, String id2) {
+		DatagramSocket ds = null;
+		try {
+			String data = message + "," + id1 + "," + id2;
+			ds = new DatagramSocket();
+			byte[] msg = data.getBytes();
+			InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
+			DatagramPacket dp = new DatagramPacket(msg, msg.length, ia, Constants.FAULT_PORT);
+			ds.send(dp);
+		} catch (SocketException e) {
+			logger.info(e.getMessage());
+		} catch (UnknownHostException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 	
 	/**

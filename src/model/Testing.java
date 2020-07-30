@@ -34,7 +34,7 @@ public class Testing extends Thread {
 		System.out.println("Username : testuserdata1");
 		System.out.println("Password : testuserdata1");
 		System.out.println("Old IP : 182.123.123.123 (Asian)");
-		System.out.println("New IP : 93.123.123.123 (EUServer)\n");
+		System.out.println("New IP : 93.123.123.123 (RM1EUServer)\n");
 
 		System.out.println("\nTest 1 : Create player account with 182.123.123.123 (Asian) Server");
 		t.create();
@@ -44,17 +44,17 @@ public class Testing extends Thread {
 		t.getplayerstatus();
 		System.out.println("\nTest 4 : Sign out player account from 182.123.123.123 (Asian) Server");
 		t.signout();
-		System.out.println("\nTest 5 : Transfer player account 182.123.123.123 (Asian) to 93.123.123.123 (EUServer) Server");
+		System.out.println("\nTest 5 : Transfer player account 182.123.123.123 (Asian) to 93.123.123.123 (RM1EUServer) Server");
 		t.transferaccount();
-		System.out.println("\nTest 6 : Try Sign in player account into old server (182.123.123.123 Asian) after transferting");
+		System.out.println("\nTest 6 : Try Sign in player account into old RM1Server (182.123.123.123 Asian) after transferting");
 		t.signin();
-		System.out.println("\nTest 7 : Sign in player account into new server (93.123.123.123 EUServer) after transferting");
+		System.out.println("\nTest 7 : Sign in player account into new RM1Server (93.123.123.123 RM1EUServer) after transferting");
 		t.signinagain();
 		System.out.println("\nTest 8 : Get player status");
 		t.getplayerstatusagain();
-		System.out.println("\nTest 9 : Suspend player account from 93.123.123.123 (EUServer) Server");
+		System.out.println("\nTest 9 : Suspend player account from 93.123.123.123 (RM1EUServer) Server");
 		t.suspendaccount();
-		System.out.println("\nTest 10 : Try Sign in player account after suspended in 93.123.123.123 (EUServer) Server");
+		System.out.println("\nTest 10 : Try Sign in player account after suspended in 93.123.123.123 (RM1EUServer) Server");
 		t.signinagain();
 		System.out.println("\nTest 11 : Get player status");
 		t.getplayerstatusagain();
@@ -63,7 +63,7 @@ public class Testing extends Thread {
 		System.out.println("\n--------------------------- Advanced Test Cases ---------------------------\n");
 		System.out.println("Test case detail");
 		System.out.println("----------------");
-		System.out.println("- I have made 3 threads that run on Asian server and transfer operations are performed on EUServer server");
+		System.out.println("- I have made 3 threads that run on Asian RM1Server and transfer operations are performed on RM1EUServer RM1Server");
 		System.out.println("\n- Each threads try to create 3 different players with username testuserdata1, testuserdata2 and testuserdata3");
 		System.out.println("\n- Out of 9 thread calls only 3 will be successful and rest of them contains an error");
 		System.out.println("\n- Each threads try to suspend testuserdata1 player account only 1 out of 3 will be successful");
@@ -72,7 +72,7 @@ public class Testing extends Thread {
 		System.out.println("\n- Each threads try to transfer testuserdata2 player account only 1 out of 3 will be successful");
 		System.out.println("\n- Each threads try to suspend testuserdata2 player account if its already transfered than none of thread "
 				+ "\n  will be successful otherwise only 1 out of 3 will be successful");
-		System.out.println("\n- I have made 3 threads that run on Asian server\n");
+		System.out.println("\n- I have made 3 threads that run on Asian RM1Server\n");
 		
 		
 		for (int i=0; i<3; i++) {
@@ -87,7 +87,7 @@ public class Testing extends Thread {
 		System.out.println("\nMethod : getPlayerStatus() , " + createAdminObject("182.123.123.123").getPlayerStatus("Admin", "Admin", "182.123.123.123"));
 				
 		// removing players after test execution to avoid from errors
-		// and no need to restart server again to perform other actions.
+		// and no need to restart RM1Server again to perform other actions.
 		createAdminObject("182.123.123.123").suspendAccount("Admin", "Admin", "182.123.123.123", "testuserdata3");
 		createAdminObject("93.123.123.123").suspendAccount("Admin", "Admin", "93.123.123.123", "testuserdata2");
 				

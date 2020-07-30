@@ -1,6 +1,6 @@
 package client;
 //References:
-//https://systembash.com/a-simple-java-udp-server-and-udp-client/
+//https://systembash.com/a-simple-java-udp-RM1Server-and-udp-client/
 //https://www.geeksforgeeks.org/multithreading-in-java/
 //https://www.geeksforgeeks.org/synchronized-in-java/
 //https://objectcomputing.com/resources/publications/sett/january-2002-corba-and-java-by-don-busch-principal-software-engineer
@@ -346,7 +346,7 @@ public class AdministratorClient {
 
 	
 	/**
-	 * This method is used to set the server object based on the ip
+	 * This method is used to set the RM1Server object based on the ip
 	 * @param ip ip address
 	 * @throws AccessException
 	 * @throws RemoteException

@@ -1,6 +1,6 @@
 package client;
 //References:
-//https://systembash.com/a-simple-java-udp-server-and-udp-client/
+//https://systembash.com/a-simple-java-udp-RM1Server-and-udp-client/
 //https://www.geeksforgeeks.org/multithreading-in-java/
 //https://www.geeksforgeeks.org/synchronized-in-java/
 //https://objectcomputing.com/resources/publications/sett/january-2002-corba-and-java-by-don-busch-principal-software-engineer
@@ -325,8 +325,8 @@ public class PlayerClient {
 			logger.info("IP : " + ip + ", username : " + username + ", start createPlayerAccount() operation.");
 			playerObj = createPlayerObject();
 			String response = playerObj.createPlayerAccount(firstname, lastname, age, username, password, ip);
-			logger.info("IP : " + ip + ", username : " + username + ", Result createPlayerAccount() : " + response);
 			System.out.println(response);
+			logger.info("IP : " + ip + ", username : " + username + ", Result createPlayerAccount() : " + response);
 		}
 	}
 	
@@ -397,8 +397,8 @@ public class PlayerClient {
 			logger.info("IP : " + ip + ", username : " + username + ", start playerSignIn() operation.");
 			playerObj = createPlayerObject();
 			String response = playerObj.playerSignIn(username, password, ip);
-			logger.info("IP : " + ip + ", username : " + username + ", Result playerSignIn() : " + response);
 			System.out.println(response);
+			logger.info("IP : " + ip + ", username : " + username + ", Result playerSignIn() : " + response);
 		}
 	}
 	
@@ -455,8 +455,8 @@ public class PlayerClient {
 			logger.info("IP : " + ip + ", username : " + username + ", start playerSignOut() operation.");
 			playerObj = createPlayerObject();
 			String response = playerObj.playerSignOut(username, ip);
-			logger.info("IP : " + ip + ", username : " + username + ", Result playerSignOut() : " + response);
 			System.out.println(response);
+			logger.info("IP : " + ip + ", username : " + username + ", Result playerSignOut() : " + response);
 		}
 	}
 	
@@ -537,7 +537,7 @@ public class PlayerClient {
 			}
 			if (!isNullOrEmpty(username) && !isNullOrEmpty(password) && ipCheck(ip) && ipCheck(newip)) {
 				if(ip.substring(0, 2).equals(newip.substring(0, 2))) {
-					System.out.println("===== The player can't be transfered within same server. =====");
+					System.out.println("===== The player can't be transfered within same RM1Server. =====");
 				} else {
 					is_info_collected = true;
 				}
@@ -548,8 +548,8 @@ public class PlayerClient {
 			logger.info("IP : " + ip + ", username : " + username + ", start transferAccount() operation.");
 			playerObj = createPlayerObject();
 			String response = playerObj.transferAccount(username, password, ip, newip);
-			logger.info("IP : " + ip + ", username : " + username + ", Result transferAccount() : " + response);
 			System.out.println(response);
+			logger.info("IP : " + ip + ", username : " + username + ", Result transferAccount() : " + response);
 		}
 	}
 	/**
@@ -587,7 +587,7 @@ public class PlayerClient {
 
 	
 	/**
-	 * This method is used to set the server object based on the ip
+	 * This method is used to set the RM1Server object based on the ip
 	 * @param ip ip address
 	 * @throws InvalidName 
 	 * @throws CannotProceed 

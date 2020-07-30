@@ -1,4 +1,7 @@
-package server;
+/**
+ * 
+ */
+package frontend;
 
 import java.io.File;
 import java.net.SocketException;
@@ -12,19 +15,13 @@ import org.omg.PortableServer.POAHelper;
 
 import FECorba.FrontendInterface;
 import FECorba.FrontendInterfaceHelper;
-import frontend.FrontendImplementation;
 import sequencer.Sequencer;
 
-//References:
 /**
- *
  * @author ypandya
+ *
  */
-public class GameServer {
-	
-	/**
-	 * This is the GameServer class
-	 */
+public class Frontend {
 	
 	/**
 	 * main method to run all the servers
@@ -61,63 +58,39 @@ public class GameServer {
 					e.printStackTrace();
 				}
 			};
-
-            Thread thread1 = new Thread(t1);
-
-            thread1.start();
-            
-            new EUServer();
-			new ASServer();
-			new NAServer();
+		    Thread thread1 = new Thread(t1);
+		    thread1.start();
+		    
+		    Runnable t2 = () -> {
+				try {
+					frontendImplementation.RM2Response();
+				} catch (SocketException e) {
+					e.printStackTrace();
+				}
+			};
+		    Thread thread2 = new Thread(t2);
+		    thread2.start();
+		    
+		    Runnable t3 = () -> {
+				try {
+					frontendImplementation.RM3Response();
+				} catch (SocketException e) {
+					e.printStackTrace();
+				}
+			};
+		    Thread thread3 = new Thread(t3);
+		    thread3.start();
 			
 			new Sequencer().startSequencer();
 			
 			orb.run();		
-		
+
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 		}
 
-		System.out.println("Server(s) are closed");
-
 	}
-					
-	/**
-	 * This method is used to load the initial player data
-	 * @param europe europe controller object 
-	 * @param northamerica northamerica controller object 
-	 * @param asia asia controller object 
-	 */
-//	static void loadData(Controller europe, Controller northamerica, Controller asia) {
-//		
-//		BufferedReader reader;
-//		try {
-//			reader = new BufferedReader(new FileReader("src/data.txt"));
-//			String line = reader.readLine();
-//			while (line != null) {
-//				String[] listParts = line.split(",");
-//				String firstName = listParts[0];
-//				String lastName = listParts[1];
-//				String age = listParts[2];
-//				String userName = listParts[3];
-//				String password = listParts[4];
-//				String ipAddress = listParts[5];
-//				
-//				if (ipAddress.startsWith("132")) {
-//					northamerica.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
-//				} else if (ipAddress.startsWith("93")) {
-//					europe.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
-//				} else if (ipAddress.startsWith("182")) {
-//					asia.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
-//				}
-//				line = reader.readLine();
-//			}
-//			reader.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//	}
-	
+
 	/**
 	 * This method is used to create logs directory to store the logs
 	 * @param path location of the logs folder

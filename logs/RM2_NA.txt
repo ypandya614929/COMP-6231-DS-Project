@@ -1,0 +1,28 @@
+Jul 30, 2020 4:28:56 PM RM2Server.RM2NAServer addLog
+INFO: 
+Jul 30, 2020 4:28:56 PM RM2Server.RM2NAServer serverConnection
+INFO: North American Server Started
+Jul 30, 2020 4:29:07 PM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:29:07 PM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Jul 30, 2020 4:29:38 PM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Jul 30, 2020 4:29:38 PM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
+Jul 30, 2020 4:41:01 PM RM2Server.RM2NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, start playerSignIn() operation.
+Jul 30, 2020 4:41:01 PM RM2Server.RM2NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, Result playerSignIn() : Invalid password or IP address
+Jul 30, 2020 4:41:37 PM RM2Server.RM2NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, start playerSignIn() operation.
+Jul 30, 2020 4:41:37 PM RM2Server.RM2NAServer playerSignIn
+INFO: IP : 132.123.123.123, username : ypandya, Result playerSignIn() : Player sign in successfully
+Jul 30, 2020 4:41:53 PM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:41:53 PM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 1 online , 0 offline. 
+Jul 30, 2020 4:42:44 PM RM2Server.RM2NAServer transferAccount
+INFO: IP : 132.123.123.123, username : ypandya, start transferAccount() operation.
+Jul 30, 2020 4:42:44 PM RM2Server.RM2NAServer transferAccount
+INFO: IP : 132.123.123.123, username : ypandya, Result transferAccount() : Player account (ypandya) is transfered from 132.123.123.123 to 93.123.123.123

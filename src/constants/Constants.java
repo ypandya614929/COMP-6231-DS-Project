@@ -5,16 +5,9 @@ package constants;
  */
 public class Constants {
 	
-	public static final String FRONTEND_IP = "localhost";
-	public static final String FAIL_RM1_IP = "localhost";
-	public static final String FAIL_RM2_IP = "localhost";
-	public static final String FAIL_RM3_IP = "localhost";
-	public static final String MULTICAST_IP = "localhost";
-	public static final String FAULT_MULTICAST_IP = "localhost";
-	
 	public static final int FAULT_PORT = 6467;
 	public static final int SEQUENCER_PORT = 6666;
-	public static final int RM_FRONTEND_PORT = 1110;
+
 	public static final int RM1_FRONTEND_PORT = 1110;
 	public static final int RM2_FRONTEND_PORT = 1111;
 	public static final int RM3_FRONTEND_PORT = 1112;
@@ -27,11 +20,17 @@ public class Constants {
 	
 	public static final int BYTE_LENGTH = 65535;
 	
-	public static final int NA_SERVER_PORT = 8882;
+	public static final int RM1_EU_SERVER_PORT = 8880;
+	public static final int RM1_AS_SERVER_PORT = 8881;
+	public static final int RM1_NA_SERVER_PORT = 8882;
 	
-	public static final int AS_SERVER_PORT = 8881;
+	public static final int RM2_EU_SERVER_PORT = 8884;
+	public static final int RM2_AS_SERVER_PORT = 8885;
+	public static final int RM2_NA_SERVER_PORT = 8886;
 	
-	public static final int EU_SERVER_PORT = 8880;
+	public static final int RM3_EU_SERVER_PORT = 8887;
+	public static final int RM3_AS_SERVER_PORT = 8888;
+	public static final int RM3_NA_SERVER_PORT = 8889;
 	
 	public static final String LOGS_DIRECTORY = "./logs";
 	

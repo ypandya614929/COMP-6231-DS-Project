@@ -1,0 +1,12 @@
+Jul 30, 2020 4:28:56 PM RM2Server.RM2ASServer addLog
+INFO: 
+Jul 30, 2020 4:28:56 PM RM2Server.RM2ASServer serverConnection
+INFO: Asian Server Started
+Jul 30, 2020 4:29:07 PM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:29:07 PM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
+Jul 30, 2020 4:41:53 PM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:41:53 PM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 

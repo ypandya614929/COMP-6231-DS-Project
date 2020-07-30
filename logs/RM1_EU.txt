@@ -1,0 +1,16 @@
+Jul 30, 2020 4:28:56 PM RM1Server.RM1EUServer addLog
+INFO: 
+Jul 30, 2020 4:28:56 PM RM1Server.RM1EUServer serverConnection
+INFO: European Server Started
+Jul 30, 2020 4:29:07 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:29:07 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
+Jul 30, 2020 4:41:53 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 30, 2020 4:41:53 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
+Jul 30, 2020 4:42:44 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Jul 30, 2020 4:42:44 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully

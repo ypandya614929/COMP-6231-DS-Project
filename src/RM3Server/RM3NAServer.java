@@ -1,4 +1,4 @@
-package server;
+package RM3Server;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,25 +25,25 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author ypandya
  *
  */
-public class EUServer {
+public class RM3NAServer {
 	/**
-	 * This is model class for Europe server
+	 * This is model class for Europe RM1Server
 	 */
 	ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> adminserverData;
 	ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> playerserverData;
-	String europIp;
+	String naIp;
 	private static Logger logger;
 
 	/**
-	 * This method is used to retrieve admin data from the server
-	 * @return ConcurrentHashMap containing admin server data
+	 * This method is used to retrieve admin data from the RM1Server
+	 * @return ConcurrentHashMap containing admin RM1Server data
 	 */
 	public ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> getAdminserverData() {
 		return adminserverData;
 	}
 
 	/**
-	 * This method is used to store player data on the server
+	 * This method is used to store player data on the RM1Server
 	 * @param serverData
 	 */
 	public void setPlayerserverData(ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> serverData) {
@@ -51,15 +51,15 @@ public class EUServer {
 	}
 	
 	/**
-	 * This method is used to retrieve player data from the server
-	 * @return ConcurrentHashMap containing player server data
+	 * This method is used to retrieve player data from the RM1Server
+	 * @return ConcurrentHashMap containing player RM1Server data
 	 */
 	public ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> getPlayerserverData() {
 		return playerserverData;
 	}
 
 	/**
-	 * This method is used to store admin data on the server
+	 * This method is used to store admin data on the RM1Server
 	 * @param serverData
 	 */
 	public void setAdminserverData(ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> serverData) {
@@ -67,31 +67,31 @@ public class EUServer {
 	}
 
 	/**
-	 * This method is used to get ip of the server
-	 * @return String ip of the server
+	 * This method is used to get ip of the RM1Server
+	 * @return String ip of the RM1Server
 	 */
-	public String geteuropIp() {
-		return europIp;
+	public String getnaIp() {
+		return naIp;
 	}
 
 	/**
-	 * This method is used to set ip of the server
-	 * @param europIp ip of the server
+	 * This method is used to set ip of the RM1Server
+	 * @param naIp ip of the RM1Server
 	 */
-	public void seteuropIp(String europIp) {
-		this.europIp = europIp;
+	public void getnaIp(String naIp) {
+		this.naIp = naIp;
 	}
 
 	/**
 	 * Constructor
 	 */
-	public EUServer() {
+	public RM3NAServer() {
 		adminserverData = new ConcurrentHashMap<>();
 		playerserverData = new ConcurrentHashMap<>();
-		Runnable eu = () -> {
-			serverConnection(Constants.EU_SERVER_PORT);
+		Runnable na = () -> {
+			serverConnection(Constants.RM3_NA_SERVER_PORT);
 		};
-		Thread t = new Thread(eu);
+		Thread t = new Thread(na);
 		t.start();
 	}
 
@@ -135,11 +135,11 @@ public class EUServer {
 					}
 				}
 			}
-			logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : " + "Europe : "+ onlineCount + " online , " + offlineCount + " offline. ");
-			String output = "Europe : "+ onlineCount + " online , " + offlineCount + " offline. ";
-			output += DatafromOtherIP(username, password, ip, Constants.AS_SERVER_PORT, "getUDPPlayerStatus");
+			logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : " + "North American : "+ onlineCount + " online , " + offlineCount + " offline. ");
+			String output = "North American : "+ onlineCount + " online , " + offlineCount + " offline. ";
+			output += DatafromOtherIP(username, password, ip, Constants.RM3_EU_SERVER_PORT, "getUDPPlayerStatus");
 			output += " ";
-			output += DatafromOtherIP(username, password, ip, Constants.NA_SERVER_PORT, "getUDPPlayerStatus");
+			output += DatafromOtherIP(username, password, ip, Constants.RM3_AS_SERVER_PORT, "getUDPPlayerStatus");
 			return output;
 		}
 		logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : invalid username or password");
@@ -147,7 +147,7 @@ public class EUServer {
 	}
 	
 	/**
-	 * This synchronized method is used to get the status of the EU players
+	 * This synchronized method is used to get the status of the NA players
 	 * @param userName username of the admin
 	 * @param password password of the admin
 	 * @param ipAddress ip of the admin
@@ -186,8 +186,8 @@ public class EUServer {
 					}
 				}
 			}
-			logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : " + "Europe : "+ onlineCount + " online , " + offlineCount + " offline. ");
-			String output = "Europe : "+ onlineCount + " online , " + offlineCount + " offline. ";
+			logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : " + "North American : "+ onlineCount + " online , " + offlineCount + " offline. ");
+			String output = "North American : "+ onlineCount + " online , " + offlineCount + " offline. ";
 			return output;
 		}
 		logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : invalid username or password");
@@ -377,12 +377,12 @@ public class EUServer {
 	}
 	
 	/**
-	 * This method used to communicate with server to transfer player
+	 * This method used to communicate with RM1Server to transfer player
 	 * @param username username of the player
 	 * @param password password of the player
 	 * @param age age of the player
 	 * @param ip new ip of the player
-	 * @param port server port number 
+	 * @param port RM1Server port number 
 	 * @param fun type of method
 	 * @return
 	 */
@@ -421,31 +421,31 @@ public class EUServer {
 	 */
 	public int getServerPort(String ip) {
 		if (ip.startsWith("132")) {
-			return Constants.NA_SERVER_PORT;
+			return Constants.RM3_NA_SERVER_PORT;
 		}
 		else if (ip.startsWith("93")) {
-			return Constants.EU_SERVER_PORT;
+			return Constants.RM3_EU_SERVER_PORT;
 		}
 		else if (ip.startsWith("182")) {
-			return Constants.AS_SERVER_PORT;
+			return Constants.RM3_AS_SERVER_PORT;
 		}
 		return 0;	
 	}
 	
 	/**
-	 * This method is used to connect with port specific server to retrive player status from
-	 * that server
-	 * @param port port of the server that is running on
+	 * This method is used to connect with port specific RM1Server to retrive player status from
+	 * that RM1Server
+	 * @param port port of the RM1Server that is running on
 	 */
 	public void serverConnection(int port) {
-		addLog("logs/EU.txt", "EU");
-		logger.info("European Server Started");
+		addLog("logs/RM3_NA.txt", "RM3_NA");
+		logger.info("North American Server Started");
 		DatagramSocket ds = null;
 
 		while (true) {
 			try {
 				
-				int udp_port = Constants.RM1_FRONTEND_PORT;
+				int udp_port = Constants.RM3_FRONTEND_PORT;
 				
 				ds = new DatagramSocket(port);
 				byte[] receive = new byte[Constants.BYTE_LENGTH];
@@ -513,6 +513,7 @@ public class EUServer {
 					String password = data1[4].trim();
 					temp = transferAccount(username, password, ip, new_ip);
 				}
+
 				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),
 						dp.getAddress(), udp_port);
 				ds.send(dp1);
@@ -532,7 +533,7 @@ public class EUServer {
 	 * @param ip ip of the admin
 	 * @param port port of the other servers that are running on
 	 * @param fun
-	 * @return String containing number of online and offline players from port specific server
+	 * @return String containing number of online and offline players from port specific RM1Server
 	 */
 	synchronized public String DatafromOtherIP(String username, String password, String ip, int port, String fun) {
 
