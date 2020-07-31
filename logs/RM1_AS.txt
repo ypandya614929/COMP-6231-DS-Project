@@ -1,12 +1,40 @@
-Jul 30, 2020 4:28:56 PM RM1Server.RM1ASServer addLog
+Jul 31, 2020 5:12:16 AM RM1Server.RM1ASServer addLog
 INFO: 
-Jul 30, 2020 4:28:56 PM RM1Server.RM1ASServer serverConnection
+Jul 31, 2020 5:12:16 AM RM1Server.RM1ASServer serverConnection
 INFO: Asian Server Started
-Jul 30, 2020 4:29:07 PM RM1Server.RM1ASServer getUDPPlayerStatus
+Jul 31, 2020 5:12:51 AM RM1Server.RM1ASServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 30, 2020 4:29:07 PM RM1Server.RM1ASServer getUDPPlayerStatus
+Jul 31, 2020 5:12:51 AM RM1Server.RM1ASServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Jul 30, 2020 4:41:53 PM RM1Server.RM1ASServer getUDPPlayerStatus
+Jul 31, 2020 5:13:20 AM RM1Server.RM1ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 31, 2020 5:13:20 AM RM1Server.RM1ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
+Jul 31, 2020 5:13:43 AM RM1Server.RM1ASServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 30, 2020 4:41:53 PM RM1Server.RM1ASServer getUDPPlayerStatus
+Jul 31, 2020 5:13:43 AM RM1Server.RM1ASServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
+Jul 31, 2020 5:14:15 AM RM1Server.RM1ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 31, 2020 5:14:15 AM RM1Server.RM1ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
+Jul 31, 2020 5:14:28 AM RM1Server.RM1ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Jul 31, 2020 5:14:28 AM RM1Server.RM1ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
+Jul 31, 2020 5:15:18 AM RM1Server.RM1ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 31, 2020 5:15:18 AM RM1Server.RM1ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 1 offline. 
+Jul 31, 2020 5:15:30 AM RM1Server.RM1ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : ypandya, start playerSignIn() operation.
+Jul 31, 2020 5:15:30 AM RM1Server.RM1ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : ypandya, Result playerSignIn() : Player sign in successfully
+Jul 31, 2020 5:15:39 AM RM1Server.RM1ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jul 31, 2020 5:15:39 AM RM1Server.RM1ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 1 online , 0 offline. 
+Jul 31, 2020 5:15:50 AM RM1Server.RM1ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Jul 31, 2020 5:15:50 AM RM1Server.RM1ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (ypandya) is suspended

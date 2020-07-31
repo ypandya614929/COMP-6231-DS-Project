@@ -15,7 +15,7 @@ import org.omg.PortableServer.POAHelper;
 
 import FECorba.FrontendInterface;
 import FECorba.FrontendInterfaceHelper;
-import sequencer.Sequencer;
+import constants.Constants;
 
 /**
  * @author ypandya
@@ -28,8 +28,6 @@ public class Frontend {
 	 * @param args args for main function
 	 */
 	public static void main(String args[]) {
-		
-		buildLogDirectory("./logs");
 		
 		try {
 			
@@ -48,58 +46,19 @@ public class Frontend {
 			NamingContextExt ncRefFE = NamingContextExtHelper.narrow(objRef);
 			NameComponent pathFE[] = ncRefFE.to_name("FrontEnd");
 			ncRefFE.rebind(pathFE, hrefFE);
-			
-			System.out.println("FrontEnd Started.");
-			
+						
 			Runnable t1 = () -> {
-				try {
-					frontendImplementation.RM1Response();
-				} catch (SocketException e) {
-					e.printStackTrace();
-				}
+				frontendImplementation.serverConnection(Constants.FRONTEND_RESPONSE_PORT);
 			};
 		    Thread thread1 = new Thread(t1);
 		    thread1.start();
-		    
-		    Runnable t2 = () -> {
-				try {
-					frontendImplementation.RM2Response();
-				} catch (SocketException e) {
-					e.printStackTrace();
-				}
-			};
-		    Thread thread2 = new Thread(t2);
-		    thread2.start();
-		    
-		    Runnable t3 = () -> {
-				try {
-					frontendImplementation.RM3Response();
-				} catch (SocketException e) {
-					e.printStackTrace();
-				}
-			};
-		    Thread thread3 = new Thread(t3);
-		    thread3.start();
-			
-			new Sequencer().startSequencer();
-			
+						
 			orb.run();		
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 		}
 
-	}
-
-	/**
-	 * This method is used to create logs directory to store the logs
-	 * @param path location of the logs folder
-	 */
-	public static void buildLogDirectory(String path) {
-		File outputDir = new File(path);
-		if (!outputDir.exists()) {
-			outputDir.mkdir();
-		}
 	}
 	
 }
