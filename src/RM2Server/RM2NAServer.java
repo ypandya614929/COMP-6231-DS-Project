@@ -445,7 +445,7 @@ public class RM2NAServer {
 		while (true) {
 			try {
 				
-				int udp_port = Constants.RM2_FRONTEND_PORT;
+				int udp_port = Constants.RM2_PORT;
 				
 				ds = new DatagramSocket(port);
 				byte[] receive = new byte[Constants.BYTE_LENGTH];

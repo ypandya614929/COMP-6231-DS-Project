@@ -445,7 +445,7 @@ public class RM3EUServer {
 		while (true) {
 			try {
 				
-				int udp_port = Constants.RM3_FRONTEND_PORT;
+				int udp_port = Constants.RM3_PORT;
 				
 				ds = new DatagramSocket(port);
 				byte[] receive = new byte[Constants.BYTE_LENGTH];

@@ -28,16 +28,9 @@ import FECorba.FrontendInterfacePOA;
 public class FrontendImplementation extends FrontendInterfacePOA {
 	
 	private ORB orb;
-	
-	String RM1_response = "";
-	String RM2_response = "";
-	String RM3_response = "";
-	
-	int RM1_COUNT = 0;
-	int RM2_COUNT = 0;
-	int RM3_COUNT = 0;
-	
 	static Logger logger;
+	static String fe_response;
+	static boolean is_response_received = false;
 
 	public FrontendImplementation() {
 
@@ -57,28 +50,22 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 	public String getPlayerStatus(String userName, String password, String ipAddress) {
 		String request = "getPlayerStatus" +  "," + ipAddress + ","+ userName + "," + password;
 		sendRequest(request);
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 
 	@Override
 	public String suspendAccount(String AdminUsername, String AdminPassword, String AdminIP, String UsernameToSuspend) {
 		String request = "suspendAccount" +  "," + AdminIP + ","+ AdminUsername + "," + AdminPassword + "," + UsernameToSuspend;
 		sendRequest(request);
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 
 	@Override
@@ -86,143 +73,44 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 			String ipAddress) {
 		String request = "createPlayerAccount" +  "," + ipAddress + ","+ firstName + "," + lastName + ","+ age + "," + userName + "," + password;
 		sendRequest(request);
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 
 	@Override
 	public String playerSignIn(String userName, String password, String ipAddress) {
 		String request = "playerSignIn" +  "," + ipAddress + ","+ userName + "," + password;
 		sendRequest(request);
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 
 	@Override
 	public String playerSignOut(String userName, String ipAddress) {
 		String request = "playerSignOut" +  "," + ipAddress + ","+ userName;
 		sendRequest(request.trim());
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 
 	@Override
 	public String transferAccount(String userName, String password, String OldIPAddress, String NewIPAddress) {
 		String request = "transferAccount" +  "," + OldIPAddress + ","+ NewIPAddress + "," + userName + "," + password;
 		sendRequest(request);
+		logger.info("FE Request : " + request);
 		logger.info("waiting for response...");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		String response = receiveResponse();
-		return response;
-	}
-	
-	public void RM1Response() throws SocketException {
-		
-		DatagramSocket ds = null;
-		try {
-			
-			ds = new DatagramSocket(Constants.RM1_FRONTEND_PORT);
-			while (true) {
-				
-				byte[] res = new byte[Constants.BYTE_LENGTH];
-				DatagramPacket request = new DatagramPacket(res, res.length);
-				ds.receive(request);
-				RM1_response = new String(request.getData());
-				if (!RM1_response.isEmpty()) {
-					logger.info("RM 1 : " + RM1_response);
-				}
-			}
-			
-		} catch (SocketException e) {
-			logger.info(e.getMessage());
-		} catch (UnknownHostException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		}
-		
-	}
-	
-	public void RM2Response() throws SocketException {
-		
-		DatagramSocket ds = null;
-		try {
-			
-			ds = new DatagramSocket(Constants.RM2_FRONTEND_PORT);
-			while (true) {
-				
-				byte[] res = new byte[Constants.BYTE_LENGTH];
-				DatagramPacket request = new DatagramPacket(res, res.length);
-				ds.receive(request);
-				RM2_response = new String(request.getData());
-				if (!RM2_response.isEmpty()) {
-					logger.info("RM 2 : " + RM2_response);
-				}
-			}
-			
-		} catch (SocketException e) {
-			logger.info(e.getMessage());
-		} catch (UnknownHostException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		}
-		
-	}
-	
-	public void RM3Response() throws SocketException {
-		
-		DatagramSocket ds = null;
-		try {
-			
-			ds = new DatagramSocket(Constants.RM3_FRONTEND_PORT);
-			while (true) {
-				
-				byte[] res = new byte[Constants.BYTE_LENGTH];
-				DatagramPacket request = new DatagramPacket(res, res.length);
-				ds.receive(request);
-				RM3_response = new String(request.getData());
-				if (!RM3_response.isEmpty()) {
-					logger.info("RM 3 : " + RM3_response);
-				}
-			}
-			
-		} catch (SocketException e) {
-			logger.info(e.getMessage());
-		} catch (UnknownHostException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		}
-		
+		String reply = getResponse();
+		logger.info("FE Response : " + reply);
+		return reply;
 	}
 	
 	public void sendRequest(String message) {
@@ -231,7 +119,7 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 			ds = new DatagramSocket();
 			byte[] msg = message.getBytes();
 			InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
-			DatagramPacket request = new DatagramPacket(msg, msg.length, ia, Constants.SEQUENCER_PORT);
+			DatagramPacket request = new DatagramPacket(msg, msg.length, ia, Constants.LEADER_PORT);
 			ds.send(request);
 		} catch (SocketException e) {
 			logger.info(e.getMessage());
@@ -244,59 +132,46 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 		}
 	}
 	
-	public String receiveResponse() {
-		if (RM1_response.trim().equals(RM2_response.trim())
-				&& RM2_response.trim().equals(RM3_response.trim())) {
-			return RM1_response;
-		} else if (RM1_response.trim().equals(RM2_response.trim())) {
-			if (!RM3_response.equals("Server crashed")) {
-				RM3_COUNT++;
-				System.out.println(" RM3_COUNT " + RM3_COUNT);
-				if (RM3_COUNT == 3) {
-					logger.info("FRONTEND : RM1 sending to RM3");
-					multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM3_ID);
-					RM3_COUNT = 0;
-				}
+	public void serverConnection(int port) {
+		
+		logger.info("FrontEnd Started!");
+		DatagramSocket ds = null;
+
+		while (true) {
+			try {
+								
+				ds = new DatagramSocket(port);
+				byte[] receive = new byte[Constants.BYTE_LENGTH];
+				DatagramPacket dp = new DatagramPacket(receive, receive.length);
+				ds.receive(dp);
+				byte[] data = dp.getData();
+				
+				fe_response = new String(data);
+				synchronized (this) {
+		            is_response_received = true;
+		            this.notifyAll();
+		        }
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				ds.close();
 			}
-			return RM1_response;
-		} else if (RM1_response.trim().equals(RM3_response.trim())) {
-			RM2_COUNT++;
-			if (RM2_COUNT == 3) {
-				logger.info("FRONTEND : RM1 sending to RM2");
-				multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM2_ID);
-				RM2_COUNT = 0;
-			}
-			return RM1_response;
-		} else if (RM2_response.trim().equals(RM3_response.trim())) {
-			RM1_COUNT++;
-			if (RM1_COUNT == 3) {
-				logger.info("RM2 sending to RM1");
-				multicastFailtoRM("Server defect", Constants.RM2_ID, Constants.RM1_ID);
-				RM1_COUNT = 0;
-			}
-			return RM2_response;
 		}
-		return RM1_response;
 	}
 	
-	public void multicastFailtoRM(String message, String id1, String id2) {
-		DatagramSocket ds = null;
-		try {
-			String data = message + "," + id1 + "," + id2;
-			ds = new DatagramSocket();
-			byte[] msg = data.getBytes();
-			InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
-			DatagramPacket dp = new DatagramPacket(msg, msg.length, ia, Constants.FAULT_PORT);
-			ds.send(dp);
-		} catch (SocketException e) {
-			logger.info(e.getMessage());
-		} catch (UnknownHostException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			logger.info(e.getMessage());
-			e.printStackTrace();
-		}
+	synchronized public String getResponse() {
+		synchronized (this) {
+            while (!is_response_received) {
+                try {
+                    this.wait();
+                } catch (InterruptedException e) {}
+            }
+        }
+		String reply = new String(fe_response);
+		is_response_received = false;
+		fe_response = "";
+		return reply;
 	}
 	
 	/**
@@ -331,5 +206,6 @@ public class FrontendImplementation extends FrontendInterfacePOA {
 			logger.info("Unable to create file, please check file permission.");
 		}
 	}
-	
+		
 }
+

@@ -445,7 +445,7 @@ public class RM2EUServer {
 		while (true) {
 			try {
 				
-				int udp_port = Constants.RM2_FRONTEND_PORT;
+				int udp_port = Constants.RM2_PORT;
 				
 				ds = new DatagramSocket(port);
 				byte[] receive = new byte[Constants.BYTE_LENGTH];
@@ -513,9 +513,11 @@ public class RM2EUServer {
 					String password = data1[4].trim();
 					temp = transferAccount(username, password, ip, new_ip);
 				}
+				logger.info(fun.trim()+"-------------------"+udp_port);
 				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),
 						dp.getAddress(), udp_port);
 				ds.send(dp1);
+				logger.info(temp+"++++++++++++++++++++"+dp.getAddress());
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

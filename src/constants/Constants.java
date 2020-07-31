@@ -6,11 +6,13 @@ package constants;
 public class Constants {
 	
 	public static final int FAULT_PORT = 6467;
-	public static final int SEQUENCER_PORT = 6666;
+	public static final int LEADER_PORT = 6666;
 
-	public static final int RM1_FRONTEND_PORT = 1110;
-	public static final int RM2_FRONTEND_PORT = 1111;
-	public static final int RM3_FRONTEND_PORT = 1112;
+	public static final int RM1_PORT = 1110;
+	public static final int RM2_PORT = 1111;
+	public static final int RM3_PORT = 1112;
+	
+	public static final int FRONTEND_RESPONSE_PORT = 1113;
 	
 	public static final String LOCALHOST = "localhost";
 	
