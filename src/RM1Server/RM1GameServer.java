@@ -15,6 +15,9 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import RM1Server.MyRMThreads;
+import RM2Server.RM2GameServer;
+import RM3Server.RM3GameServer;
 import constants.Constants;
 
 //References:
@@ -38,6 +41,13 @@ public class RM1GameServer {
 	static int RM2_COUNT = 0;
 	static int RM3_COUNT = 0;
 	
+	public RM1EUServer rm1_eu_obj;
+	public RM1ASServer rm1_as_obj;
+	public RM1NAServer rm1_na_obj;
+	
+	public RM2GameServer rm2Gameserver_obj;
+	public RM3GameServer rm3Gameserver_obj;
+	
 	static boolean is_send_response = false;
 	
 	/**
@@ -48,11 +58,14 @@ public class RM1GameServer {
 		
 		try {
 			
-			RM1EUServer rm1_eu_obj = new RM1EUServer();
-			RM1ASServer rm1_as_obj = new RM1ASServer();
-			RM1NAServer rm1_na_obj = new RM1NAServer();
+			rm1_eu_obj = new RM1EUServer();
+			rm1_as_obj = new RM1ASServer();
+			rm1_na_obj = new RM1NAServer();
 			
 			if (is_leader) {
+				
+				rm2Gameserver_obj = new RM2GameServer(false);
+				rm3Gameserver_obj = new RM3GameServer(false);
 				
 				Runnable t1 = () -> {
 					startLeader();
@@ -259,7 +272,6 @@ public class RM1GameServer {
 		} else if (RM1_response.trim().equals(RM2_response.trim())) {
 			if (!RM3_response.equals("Server crashed")) {
 				RM3_COUNT++;
-				System.out.println(" RM3_COUNT " + RM3_COUNT);
 				if (RM3_COUNT == 3) {
 					logger.info("FRONTEND : RM1 sending to RM3");
 					multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM3_ID);
@@ -328,11 +340,12 @@ public class RM1GameServer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String ip = data1[1];
-				String dpData = new String(data).trim();
-				logger.info("Leader Data : " + dpData);
 				count++;
+				String dpData = new String(data).trim();
+				String sendRequest = dpData.concat(","+count);
+				logger.info("Leader Data : " + sendRequest);
 				
-				byte[] msg = dpData.getBytes();
+				byte[] msg = sendRequest.getBytes();
 				
 				ExecutorService executor = Executors.newFixedThreadPool(Threads);
 				for (int i = 1; i <= Threads; i++) {

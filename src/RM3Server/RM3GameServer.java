@@ -15,6 +15,8 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import RM1Server.RM1GameServer;
+import RM2Server.RM2GameServer;
 import constants.Constants;
 
 //References:
@@ -38,6 +40,13 @@ public class RM3GameServer {
 	static int RM2_COUNT = 0;
 	static int RM3_COUNT = 0;
 	
+	public RM3EUServer rm3_eu_obj;
+	public RM3ASServer rm3_as_obj;
+	public RM3NAServer rm3_na_obj;
+	
+	public RM1GameServer rm1Gameserver_obj;
+	public RM2GameServer rm2Gameserver_obj;
+	
 	static boolean is_send_response = false;
 	
 	/**
@@ -48,11 +57,14 @@ public class RM3GameServer {
 		
 		try {
 			
-			RM3EUServer rm3_eu_obj = new RM3EUServer();
-			RM3ASServer rm3_as_obj = new RM3ASServer();
-			RM3NAServer rm3_na_obj = new RM3NAServer();
+			rm3_eu_obj = new RM3EUServer();
+			rm3_as_obj = new RM3ASServer();
+			rm3_na_obj = new RM3NAServer();
 			
 			if (is_leader) {
+				
+				rm1Gameserver_obj = new RM1GameServer(false);
+				rm2Gameserver_obj = new RM2GameServer(false);
 				
 				Runnable t1 = () -> {
 					startLeader();
@@ -259,18 +271,20 @@ public class RM3GameServer {
 		} else if (RM1_response.trim().equals(RM2_response.trim())) {
 			if (!RM3_response.equals("Server crashed")) {
 				RM3_COUNT++;
-				System.out.println(" RM3_COUNT " + RM3_COUNT);
 				if (RM3_COUNT == 3) {
-					logger.info("FRONTEND : RM1 sending to RM3");
+					logger.info("FRONTEND : RM1 sends data to RM3");
 					multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM3_ID);
 					RM3_COUNT = 0;
 				}
+			}
+			if(RM3_response.equals("Server crashed")) {
+				logger.info("RM 3 : " + RM3_response);
 			}
 			return RM1_response;
 		} else if (RM1_response.trim().equals(RM3_response.trim())) {
 			RM2_COUNT++;
 			if (RM2_COUNT == 3) {
-				logger.info("FRONTEND : RM1 sending to RM2");
+				logger.info("FRONTEND : RM1 sends data to RM2");
 				multicastFailtoRM("Server defect", Constants.RM1_ID, Constants.RM2_ID);
 				RM2_COUNT = 0;
 			}
@@ -328,11 +342,12 @@ public class RM3GameServer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String ip = data1[1];
-				String dpData = new String(data).trim();
-				logger.info("Leader Data : " + dpData);
 				count++;
+				String dpData = new String(data).trim();
+				String sendRequest = dpData.concat(","+count);
+				logger.info("Leader Data : " + sendRequest);
 				
-				byte[] msg = dpData.getBytes();
+				byte[] msg = sendRequest.getBytes();
 				
 				ExecutorService executor = Executors.newFixedThreadPool(Threads);
 				for (int i = 1; i <= Threads; i++) {

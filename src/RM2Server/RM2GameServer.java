@@ -15,6 +15,9 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import RM1Server.RM1GameServer;
+import RM2Server.MyRMThreads;
+import RM3Server.RM3GameServer;
 import constants.Constants;
 
 //References:
@@ -38,6 +41,13 @@ public class RM2GameServer {
 	static int RM2_COUNT = 0;
 	static int RM3_COUNT = 0;
 	
+	public RM2EUServer rm2_eu_obj;
+	public RM2ASServer rm2_as_obj;
+	public RM2NAServer rm2_na_obj;
+	
+	public RM1GameServer rm1Gameserver_obj;
+	public RM3GameServer rm3Gameserver_obj;
+	
 	static boolean is_send_response = false;
 	
 	/**
@@ -48,11 +58,14 @@ public class RM2GameServer {
 		
 		try {
 			
-			RM2EUServer rm2_eu_obj = new RM2EUServer();
-			RM2ASServer rm2_as_obj = new RM2ASServer();
-			RM2NAServer rm2_na_obj = new RM2NAServer();
+			rm2_eu_obj = new RM2EUServer();
+			rm2_as_obj = new RM2ASServer();
+			rm2_na_obj = new RM2NAServer();
 			
 			if (is_leader) {
+				
+				rm1Gameserver_obj = new RM1GameServer(false);
+				rm3Gameserver_obj = new RM3GameServer(false);
 				
 				Runnable t1 = () -> {
 					startLeader();
@@ -328,11 +341,12 @@ public class RM2GameServer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String ip = data1[1];
-				String dpData = new String(data).trim();
-				logger.info("Leader Data : " + dpData);
 				count++;
+				String dpData = new String(data).trim();
+				String sendRequest = dpData.concat(","+count);
+				logger.info("Leader Data : " + sendRequest);
 				
-				byte[] msg = dpData.getBytes();
+				byte[] msg = sendRequest.getBytes();
 				
 				ExecutorService executor = Executors.newFixedThreadPool(Threads);
 				for (int i = 1; i <= Threads; i++) {

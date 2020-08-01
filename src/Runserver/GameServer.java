@@ -62,19 +62,13 @@ public class GameServer {
 			}
 			
 			switch(option) {
-				case 1:  
-					new RM2GameServer(false);
-					new RM3GameServer(false);
+				case 1: 
 					new RM1GameServer(true);
 					break;
-				case 2:  
-					new RM1GameServer(false);
-					new RM3GameServer(false);
+				case 2:
 					new RM2GameServer(true);
 					break;
-				case 3:  
-					new RM1GameServer(false);
-					new RM2GameServer(false);
+				case 3:
 					new RM3GameServer(true);
 					break;
 				default :
