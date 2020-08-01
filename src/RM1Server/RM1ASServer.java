@@ -29,8 +29,8 @@ public class RM1ASServer {
 	/**
 	 * This is model class for Asian RM1Server
 	 */
-	ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> adminserverData;
-	ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> playerserverData;
+	public ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> adminserverData;
+	public ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> playerserverData;
 	String asiaIp;
 	private static Logger logger;
 
@@ -86,8 +86,8 @@ public class RM1ASServer {
 	 * Constructor
 	 */
 	public RM1ASServer() {
-		adminserverData = new ConcurrentHashMap<>();
-		playerserverData = new ConcurrentHashMap<>();
+		this.adminserverData = new ConcurrentHashMap<>();
+		this.playerserverData = new ConcurrentHashMap<>();
 		Runnable as = () -> {
 			serverConnection(Constants.RM1_AS_SERVER_PORT);
 		};

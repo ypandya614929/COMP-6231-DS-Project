@@ -29,8 +29,8 @@ public class RM3EUServer {
 	/**
 	 * This is model class for Europe RM1Server
 	 */
-	ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> adminserverData;
-	ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> playerserverData;
+	public ConcurrentHashMap<String, ConcurrentHashMap<String, Administrator>> adminserverData;
+	public ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> playerserverData;
 	String europIp;
 	private static Logger logger;
 
@@ -86,8 +86,8 @@ public class RM3EUServer {
 	 * Constructor
 	 */
 	public RM3EUServer() {
-		adminserverData = new ConcurrentHashMap<>();
-		playerserverData = new ConcurrentHashMap<>();
+		this.adminserverData = new ConcurrentHashMap<>();
+		this.playerserverData = new ConcurrentHashMap<>();
 		Runnable eu = () -> {
 			serverConnection(Constants.RM3_EU_SERVER_PORT);
 		};
