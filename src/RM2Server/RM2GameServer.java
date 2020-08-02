@@ -262,7 +262,7 @@ public class RM2GameServer {
 					InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
 					String no = response.split("#")[1];
 					response = response.split("#")[0].trim();
-					logger.info("#####");
+					logger.info("##### " + no);
 					logger.info("Leader Response No : " + no + ", Data : " + response);
 					new DatagramSocket().send(new DatagramPacket(response.getBytes(), response.length(), ia, Constants.FRONTEND_RESPONSE_PORT));
 					response = "";
@@ -384,7 +384,7 @@ public class RM2GameServer {
 				String[] data1 = new String(req).split(",");
 				String ip = data1[1];
 				byte[] msg = req.getBytes();
-				logger.info("#####");
+				logger.info("##### " + request.getCount());
 				logger.info("Leader Request No : " + request.getCount() + ", Data : " + request.getReq());
 				ExecutorService executor = Executors.newFixedThreadPool(Threads);
 				for (int i = 1; i <= Threads; i++) {
