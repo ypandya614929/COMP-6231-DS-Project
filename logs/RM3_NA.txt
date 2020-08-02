@@ -1,44 +1,16 @@
-Jul 31, 2020 5:12:16 AM RM3Server.RM3NAServer addLog
+Aug 02, 2020 4:36:58 AM RM3Server.RM3NAServer addLog
 INFO: 
-Jul 31, 2020 5:12:16 AM RM3Server.RM3NAServer serverConnection
+Aug 02, 2020 4:36:58 AM RM3Server.RM3NAServer serverConnection
 INFO: North American Server Started
-Jul 31, 2020 5:12:51 AM RM3Server.RM3NAServer getPlayerStatus
+Aug 02, 2020 4:37:12 AM RM3Server.RM3NAServer getPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:12:51 AM RM3Server.RM3NAServer getPlayerStatus
+Aug 02, 2020 4:37:12 AM RM3Server.RM3NAServer getPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
-Jul 31, 2020 5:13:06 AM RM3Server.RM3NAServer createPlayerAccount
+Aug 02, 2020 4:38:36 AM RM3Server.RM3NAServer createPlayerAccount
 INFO: IP : 132.123.123.123, username : ypandya, start createPlayerAccount() operation.
-Jul 31, 2020 5:13:06 AM RM3Server.RM3NAServer createPlayerAccount
+Aug 02, 2020 4:38:36 AM RM3Server.RM3NAServer createPlayerAccount
 INFO: IP : 132.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
-Jul 31, 2020 5:13:20 AM RM3Server.RM3NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:13:20 AM RM3Server.RM3NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 1 offline. 
-Jul 31, 2020 5:13:33 AM RM3Server.RM3NAServer playerSignIn
-INFO: IP : 132.123.123.123, username : ypandya, start playerSignIn() operation.
-Jul 31, 2020 5:13:33 AM RM3Server.RM3NAServer playerSignIn
-INFO: IP : 132.123.123.123, username : ypandya, Result playerSignIn() : Player sign in successfully
-Jul 31, 2020 5:13:43 AM RM3Server.RM3NAServer getPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:13:43 AM RM3Server.RM3NAServer getPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 1 online , 0 offline. 
-Jul 31, 2020 5:13:57 AM RM3Server.RM3NAServer playerSignOut
-INFO: IP : 132.123.123.123, username : ypandya, start playerSignOut() operation.
-Jul 31, 2020 5:13:57 AM RM3Server.RM3NAServer playerSignOut
-INFO: IP : 132.123.123.123, username : ypandya, Result playerSignOut() : Player sign out successfully
-Jul 31, 2020 5:14:15 AM RM3Server.RM3NAServer getPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:14:15 AM RM3Server.RM3NAServer getPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 1 offline. 
-Jul 31, 2020 5:14:28 AM RM3Server.RM3NAServer transferAccount
-INFO: IP : 132.123.123.123, username : ypandya, start transferAccount() operation.
-Jul 31, 2020 5:14:28 AM RM3Server.RM3NAServer transferAccount
-INFO: IP : 132.123.123.123, username : ypandya, Result transferAccount() : Player account (ypandya) is transfered from 132.123.123.123 to 182.123.123.123
-Jul 31, 2020 5:15:18 AM RM3Server.RM3NAServer getUDPPlayerStatus
+Aug 02, 2020 4:39:17 AM RM3Server.RM3NAServer getUDPPlayerStatus
 INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:15:18 AM RM3Server.RM3NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
-Jul 31, 2020 5:15:39 AM RM3Server.RM3NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:15:39 AM RM3Server.RM3NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 02, 2020 4:39:17 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 1 offline. 

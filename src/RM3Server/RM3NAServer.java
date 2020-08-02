@@ -446,6 +446,7 @@ public class RM3NAServer {
 			try {
 				
 				int udp_port = Constants.RM3_PORT;
+				
 				ds = new DatagramSocket(port);
 				byte[] receive = new byte[Constants.BYTE_LENGTH];
 				DatagramPacket dp = new DatagramPacket(receive, receive.length);
@@ -453,6 +454,12 @@ public class RM3NAServer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String fun = data1[0];
+				String count = "";
+				try {
+					count = data1[data1.length-1].trim();
+				} catch (Exception e) {
+					count = "0";
+				}
 				String temp = "";
 				
 				if (fun.trim().equals("createPlayerAccount")) {
@@ -512,15 +519,10 @@ public class RM3NAServer {
 					String password = data1[4].trim();
 					temp = transferAccount(username, password, ip, new_ip);
 				}
-				try {
-					int counter = 0;
-					try {
-						counter = Integer.parseInt(data1[data1.length-1].trim());
-						if ((counter > 0 && counter % 5 == 0) && (udp_port == Constants.RM3_PORT)) {
-							temp = "Server crashed";
-						}	
-					} catch (Exception e) {}
-				} catch (Exception e) {}
+				if (udp_port==Constants.RM3_PORT) {
+					temp = temp.concat("#"+count);
+				}
+				temp = temp.trim();
 				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),
 						dp.getAddress(), udp_port);
 				ds.send(dp1);

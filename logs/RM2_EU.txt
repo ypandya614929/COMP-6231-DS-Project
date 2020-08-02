@@ -1,52 +1,16 @@
-Jul 31, 2020 5:12:16 AM RM2Server.RM2EUServer addLog
+Aug 02, 2020 4:36:58 AM RM2Server.RM2EUServer addLog
 INFO: 
-Jul 31, 2020 5:12:16 AM RM2Server.RM2EUServer serverConnection
+Aug 02, 2020 4:36:58 AM RM2Server.RM2EUServer serverConnection
 INFO: European Server Started
-Jul 31, 2020 5:12:51 AM RM2Server.RM2EUServer getUDPPlayerStatus
+Aug 02, 2020 4:37:12 AM RM2Server.RM2EUServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:12:51 AM RM2Server.RM2EUServer getUDPPlayerStatus
+Aug 02, 2020 4:37:12 AM RM2Server.RM2EUServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:12:51 AM RM2Server.RM2EUServer serverConnection
-INFO: getUDPPlayerStatus-------------------61045
-Jul 31, 2020 5:12:51 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. ++++++++++++++++++++/127.0.0.1
-Jul 31, 2020 5:13:20 AM RM2Server.RM2EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:13:20 AM RM2Server.RM2EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:13:20 AM RM2Server.RM2EUServer serverConnection
-INFO: getPlayerStatus-------------------1111
-Jul 31, 2020 5:13:20 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. Asian : 0 online , 0 offline. North American : 0 online , 1 offline.++++++++++++++++++++/127.0.0.1
-Jul 31, 2020 5:13:43 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:13:43 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:13:43 AM RM2Server.RM2EUServer serverConnection
-INFO: getUDPPlayerStatus-------------------49505
-Jul 31, 2020 5:13:43 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. ++++++++++++++++++++/127.0.0.1
-Jul 31, 2020 5:14:15 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:14:15 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:14:15 AM RM2Server.RM2EUServer serverConnection
-INFO: getUDPPlayerStatus-------------------54932
-Jul 31, 2020 5:14:15 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. ++++++++++++++++++++/127.0.0.1
-Jul 31, 2020 5:15:18 AM RM2Server.RM2EUServer getUDPPlayerStatus
+Aug 02, 2020 4:38:51 AM RM2Server.RM2EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : ypandya, start playerSignIn() operation.
+Aug 02, 2020 4:38:51 AM RM2Server.RM2EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : ypandya, Result playerSignIn() : Player account (ypandya) doesn't exists
+Aug 02, 2020 4:39:17 AM RM2Server.RM2EUServer getUDPPlayerStatus
 INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:15:18 AM RM2Server.RM2EUServer getUDPPlayerStatus
+Aug 02, 2020 4:39:17 AM RM2Server.RM2EUServer getUDPPlayerStatus
 INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:15:18 AM RM2Server.RM2EUServer serverConnection
-INFO: getUDPPlayerStatus-------------------61039
-Jul 31, 2020 5:15:18 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. ++++++++++++++++++++/127.0.0.1
-Jul 31, 2020 5:15:39 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Jul 31, 2020 5:15:39 AM RM2Server.RM2EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Jul 31, 2020 5:15:39 AM RM2Server.RM2EUServer serverConnection
-INFO: getUDPPlayerStatus-------------------50653
-Jul 31, 2020 5:15:39 AM RM2Server.RM2EUServer serverConnection
-INFO: Europe : 0 online , 0 offline. ++++++++++++++++++++/127.0.0.1

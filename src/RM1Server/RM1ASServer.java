@@ -454,6 +454,12 @@ public class RM1ASServer {
 				byte[] data = dp.getData();
 				String[] data1 = new String(data).split(",");
 				String fun = data1[0];
+				String count = "";
+				try {
+					count = data1[data1.length-1].trim();
+				} catch (Exception e) {
+					count = "0";
+				}
 				String temp = "";
 				
 				if (fun.trim().equals("createPlayerAccount")) {
@@ -513,7 +519,10 @@ public class RM1ASServer {
 					String password = data1[4].trim();
 					temp = transferAccount(username, password, ip, new_ip);
 				}
-
+				if (udp_port==Constants.RM1_PORT) {
+					temp = temp.concat("#"+count);
+				}
+				temp = temp.trim();
 				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),
 						dp.getAddress(), udp_port);
 				ds.send(dp1);

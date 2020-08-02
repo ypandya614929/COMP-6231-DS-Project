@@ -134,16 +134,8 @@ public class Testing extends Thread {
 	}
 	
 	public static FrontendInterface createAdminObject(String ip) throws NotFound, CannotProceed, InvalidName, org.omg.CosNaming.NamingContextPackage.InvalidName  {
-		if (ip.startsWith("132")) {
-			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("NA"));
-		} 
-		else if (ip.startsWith("93")) {
-			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("EU"));
-		} 
-		else if (ip.startsWith("182")) {
-			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("AS"));
-		}
-		return null;
+	
+			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
 	}
 	
 	public void run() {

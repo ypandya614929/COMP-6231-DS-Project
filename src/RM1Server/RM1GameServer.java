@@ -9,6 +9,10 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.FileHandler;
@@ -16,8 +20,6 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import RM1Server.MyRMThreads;
-import RM2Server.RM2GameServer;
-import RM3Server.RM3GameServer;
 import constants.Constants;
 
 //References:
@@ -45,10 +47,11 @@ public class RM1GameServer {
 	public RM1ASServer rm1_as_obj;
 	public RM1NAServer rm1_na_obj;
 	
-	public RM2GameServer rm2Gameserver_obj;
-	public RM3GameServer rm3Gameserver_obj;
-	
 	static boolean is_send_response = false;
+	
+	public static int request_queue_id = 1;
+	public static ArrayList<GenerateRequest> request_queue_list = new ArrayList<GenerateRequest>(); 
+	public static PriorityQueue<GenerateRequest> request_queue = new PriorityQueue<GenerateRequest>(100, new RequestComparator()); 
 	
 	/**
 	 * This is the RM1GameServer class
@@ -63,9 +66,6 @@ public class RM1GameServer {
 			rm1_na_obj = new RM1NAServer();
 			
 			if (is_leader) {
-				
-				rm2Gameserver_obj = new RM2GameServer(false);
-				rm3Gameserver_obj = new RM3GameServer(false);
 				
 				Runnable t1 = () -> {
 					startLeader();
@@ -115,6 +115,9 @@ public class RM1GameServer {
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 				};
 			    Thread thread5 = new Thread(t5);
@@ -140,9 +143,9 @@ public class RM1GameServer {
 				ds.receive(request);
 				RM1_response = new String(request.getData());
 				if (!RM1_response.isEmpty()) {
-					logger.info("RM 1 : " + RM1_response);
+					logger.info("RM 1 : " + RM1_response.split("#")[0]);
 				}
-				if(!isNullOrEmpty(RM1_response) && !isNullOrEmpty(RM2_response) && !isNullOrEmpty(RM3_response)) {
+				if(!isNullOrEmpty(RM1_response)) {
 					synchronized (this) {
 						is_send_response = true;
 						this.notifyAll();
@@ -175,7 +178,7 @@ public class RM1GameServer {
 				ds.receive(request);
 				RM2_response = new String(request.getData());
 				if (!RM2_response.isEmpty()) {
-					logger.info("RM 2 : " + RM2_response);
+					logger.info("RM 2 : " + RM2_response.split("#")[0]);
 				}
 				if(!isNullOrEmpty(RM1_response) && !isNullOrEmpty(RM2_response) && !isNullOrEmpty(RM3_response)) {
 					synchronized (this) {
@@ -210,7 +213,7 @@ public class RM1GameServer {
 				ds.receive(request);
 				RM3_response = new String(request.getData());
 				if (!RM3_response.isEmpty()) {
-					logger.info("RM 3 : " + RM3_response);
+					logger.info("RM 3 : " + RM3_response.split("#")[0]);
 				}
 				if(!isNullOrEmpty(RM1_response) && !isNullOrEmpty(RM2_response) && !isNullOrEmpty(RM3_response)) {
 					synchronized (this) {
@@ -244,7 +247,7 @@ public class RM1GameServer {
     }
 	
 	
-	public void sendResponse() throws IOException {
+	public void sendResponse() throws IOException, InterruptedException {
 		while(true) {
 			synchronized (this) {
 	            while (!is_send_response) {
@@ -253,17 +256,23 @@ public class RM1GameServer {
 	                } catch (InterruptedException e) {}
 	            }
 	            is_send_response = false;
-				response = generateResponse();
-				InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
-				response = response.trim();
-				new DatagramSocket().send(new DatagramPacket(response.getBytes(), response.length(), ia, Constants.FRONTEND_RESPONSE_PORT));
-				response = "";
-				RM1_response = "";
-				RM2_response = "";
-				RM3_response = "";
+	            Thread.sleep(1000);
+	            response = generateResponse();
+	            if (!isNullOrEmpty(response)) {
+					InetAddress ia = InetAddress.getByName(Constants.LOCALHOST);
+					String no = response.split("#")[1];
+					response = response.split("#")[0].trim();
+					logger.info("#####");
+					logger.info("Leader Response No : " + no + ", Data : " + response);
+					new DatagramSocket().send(new DatagramPacket(response.getBytes(), response.length(), ia, Constants.FRONTEND_RESPONSE_PORT));
+					response = "";
+					RM1_response = "";
+					RM2_response = "";
+					RM3_response = "";
+	            }
 	        }				
 		}
-	}	
+	}
 	
 	public static String generateResponse() {
 		if (RM1_response.trim().equals(RM2_response.trim())
@@ -338,22 +347,13 @@ public class RM1GameServer {
 				DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
 				ds.receive(dp);
 				byte[] data = dp.getData();
-				String[] data1 = new String(data).split(",");
-				String ip = data1[1];
 				count++;
 				String dpData = new String(data).trim();
-				String sendRequest = dpData.concat(","+count);
-				logger.info("Leader Data : " + sendRequest);
 				
-				byte[] msg = sendRequest.getBytes();
+				GenerateRequest request = new GenerateRequest(dpData, (int) count);
+				request_queue.add(request);
+				sendRequest();
 				
-				ExecutorService executor = Executors.newFixedThreadPool(Threads);
-				for (int i = 1; i <= Threads; i++) {
-					int port = getServerPort(ip, i);
-					Runnable task = new MyRMThreads(msg, port);
-					executor.execute(task);
-				}
-				executor.shutdown();
 			
 			}
 			
@@ -370,6 +370,31 @@ public class RM1GameServer {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	synchronized public static void sendRequest() {
+		Iterator<GenerateRequest> request_itr = request_queue.iterator(); 
+		while (request_itr.hasNext()) {
+			GenerateRequest request = request_itr.next();
+			if(request.getCount() == request_queue_id) {
+				request_queue_id++;
+				String req = request.getReq();
+				request_queue_list.add(request);
+				req = req.concat(","+request.getCount());
+				String[] data1 = new String(req).split(",");
+				String ip = data1[1];
+				byte[] msg = req.getBytes();
+				logger.info("#####");
+				logger.info("Leader Request No : " + request.getCount() + ", Data : " + request.getReq());
+				ExecutorService executor = Executors.newFixedThreadPool(Threads);
+				for (int i = 1; i <= Threads; i++) {
+					int port = getServerPort(ip, i);
+					Runnable task = new MyRMThreads(msg, port);
+					executor.execute(task);
+				}
+				executor.shutdown();
+			}
+		} 			 
 	}
 	
 	/**
@@ -449,6 +474,32 @@ public class RM1GameServer {
 	
 }
 
+class GenerateRequest {
+    public String req; 
+    public int count; 
+          
+    public GenerateRequest(String req, int count) { 
+      
+        this.req = req; 
+        this.count = count; 
+    }
+
+	/**
+	 * @return the req
+	 */
+	public String getReq() {
+		return req;
+	}
+
+	/**
+	 * @return the count
+	 */
+	public int getCount() {
+		return count;
+	}
+
+}
+
 class MyRMThreads implements Runnable {
 	
 	private final byte[] msg;
@@ -470,3 +521,20 @@ class MyRMThreads implements Runnable {
 		}
 	}
 }
+
+class RequestComparator implements Comparator<GenerateRequest> { 
+
+	/**
+	 *
+	 */
+	@Override
+	public int compare(GenerateRequest prev, GenerateRequest current) {
+		
+		if (prev.count < current.count) 
+			return 1; 
+		else if (prev.count > current.count) 
+			return -1; 
+		return 0;
+		
+	} 
+} 
