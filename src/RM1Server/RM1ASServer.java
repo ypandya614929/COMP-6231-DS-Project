@@ -14,6 +14,8 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import com.google.gson.Gson;
+
 import constants.Constants;
 import model.Administrator;
 import model.Player;
@@ -93,6 +95,11 @@ public class RM1ASServer {
 		};
 		Thread t = new Thread(as);
 		t.start();
+		Runnable usd = () -> {
+			sendserverData(Constants.RM1_AS_SEND_DATA_PORT);
+		};
+		Thread t1 = new Thread(usd);
+		t1.start();
 	}
 
 	/**
@@ -430,6 +437,39 @@ public class RM1ASServer {
 			return Constants.RM1_AS_SERVER_PORT;
 		}
 		return 0;	
+	}
+	
+	/**
+	 * @param port
+	 */
+	public void sendserverData(int port){
+		DatagramSocket ds = null;
+		while (true) {
+			try {
+								
+				ds = new DatagramSocket(port);
+				byte[] receive = new byte[Constants.BYTE_LENGTH];
+				DatagramPacket dp = new DatagramPacket(receive, receive.length);
+				ds.receive(dp);
+				byte[] data = dp.getData();
+				String fun = new String(data);
+				String temp = "";
+				
+				if (fun.trim().equals("Data recovery")) {
+					temp = "AS#";
+					temp = temp.concat(new Gson().toJson(playerserverData));
+				}
+				temp = temp.trim();
+				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),
+						dp.getAddress(), Constants.RM3_FAULT_SERVER_PORT);
+				logger.info("== Sending Data of Asia to Replica 3 ==");
+				ds.send(dp1);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				ds.close();
+			}
+		}
 	}
 	
 	/**

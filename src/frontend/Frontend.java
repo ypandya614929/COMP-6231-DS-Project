@@ -57,7 +57,7 @@ public class Frontend {
 		    Thread thread1 = new Thread(t1);
 		    thread1.start();
 						
-		    loadData(args);
+//		    loadData(args);
 		    
 			orb.run();		
 
