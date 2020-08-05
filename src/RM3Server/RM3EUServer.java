@@ -1,7 +1,9 @@
+
 package RM3Server;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -13,6 +15,9 @@ import java.util.Map.Entry;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import constants.Constants;
 import model.Administrator;
@@ -93,6 +98,11 @@ public class RM3EUServer {
 		};
 		Thread t = new Thread(eu);
 		t.start();
+		Runnable usd = () -> {
+			updateserverData(Constants.RM3_EU_FAULT_SERVER_PORT);
+		};
+		Thread t1 = new Thread(usd);
+		t1.start();
 	}
 
 	/**
@@ -433,6 +443,39 @@ public class RM3EUServer {
 	}
 	
 	/**
+	 * @param port
+	 */
+	public void updateserverData(int port) {
+		
+		DatagramSocket ds = null;
+
+		while (true) {
+			try {
+								
+				ds = new DatagramSocket(port);
+				byte[] receive = new byte[Constants.BYTE_LENGTH];
+				DatagramPacket dp = new DatagramPacket(receive, receive.length);
+				ds.receive(dp);
+				byte[] recvdata = dp.getData();
+				String data = new String(recvdata);
+				data = data.trim();
+				if (data!="" || data!=null) {
+					logger.info("== Started Europe Server Restoring. ==");
+					Type type = new TypeToken<ConcurrentHashMap<String, ConcurrentHashMap<String, Player>>>(){}.getType();
+					ConcurrentHashMap<String, ConcurrentHashMap<String, Player>> updateASData = new Gson().fromJson(data, type);
+					this.setPlayerserverData(updateASData);
+					logger.info("== Europe Server Restored. ==");
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				ds.close();
+			}
+		}
+	}
+	
+	/**
 	 * This method is used to connect with port specific RM1Server to retrive player status from
 	 * that RM1Server
 	 * @param port port of the RM1Server that is running on
@@ -520,6 +563,9 @@ public class RM3EUServer {
 					temp = transferAccount(username, password, ip, new_ip);
 				}
 				if (udp_port==Constants.RM3_PORT) {
+					if (count.equals("5") || count.equals("6") || count.equals("7")) {
+						temp = "== Something went wrong! ==";
+					}
 					temp = temp.concat("#"+count);
 				}
 				temp = temp.trim();

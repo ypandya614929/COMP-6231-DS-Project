@@ -1,0 +1,44 @@
+Aug 05, 2020 5:44:12 AM RM3Server.RM3NAServer addLog
+INFO: 
+Aug 05, 2020 5:44:12 AM RM3Server.RM3NAServer serverConnection
+INFO: North American Server Started
+Aug 05, 2020 5:44:38 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:44:38 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:45:07 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:45:07 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:45:29 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:45:29 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:46:00 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:46:00 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:46:01 AM RM3Server.RM3NAServer updateserverData
+INFO: == Started North America Server Restoring. ==
+Aug 05, 2020 5:46:01 AM RM3Server.RM3NAServer updateserverData
+INFO: == North America Server Restored. ==
+Aug 05, 2020 5:46:40 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:46:40 AM RM3Server.RM3NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:47:06 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:47:06 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:47:33 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:47:33 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:47:53 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:47:53 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
+Aug 05, 2020 5:48:05 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 05, 2020 5:48:05 AM RM3Server.RM3NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 0 offline. 
