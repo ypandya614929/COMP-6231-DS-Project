@@ -1,68 +1,100 @@
-Aug 05, 2020 5:44:12 AM RM2Server.RM2ASServer addLog
+Aug 08, 2020 3:03:21 AM RM2Server.RM2ASServer addLog
+INFO: Aug 05, 2020 7:23:41 PM RM2Server.RM2ASServer addLog
 INFO: 
-Aug 05, 2020 5:44:12 AM RM2Server.RM2ASServer serverConnection
+Aug 05, 2020 7:23:41 PM RM2Server.RM2ASServer serverConnection
 INFO: Asian Server Started
-Aug 05, 2020 5:44:38 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:44:38 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:45:07 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:45:07 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:45:29 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:45:29 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:46:00 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:46:00 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:46:16 AM RM2Server.RM2ASServer createPlayerAccount
-INFO: IP : 182.123.123.123, username : ypandya, start createPlayerAccount() operation.
-Aug 05, 2020 5:46:16 AM RM2Server.RM2ASServer createPlayerAccount
-INFO: IP : 182.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
-Aug 05, 2020 5:46:40 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:46:40 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 1 offline. 
-Aug 05, 2020 5:46:57 AM RM2Server.RM2ASServer suspendAccount
-INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
-Aug 05, 2020 5:46:57 AM RM2Server.RM2ASServer suspendAccount
-INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (ypandya) is suspended
-Aug 05, 2020 5:47:06 AM RM2Server.RM2ASServer getPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:47:06 AM RM2Server.RM2ASServer getPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:47:25 AM RM2Server.RM2ASServer createPlayerAccount
+Aug 05, 2020 7:23:55 PM RM2Server.RM2ASServer createPlayerAccount
 INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
-Aug 05, 2020 5:47:25 AM RM2Server.RM2ASServer createPlayerAccount
+Aug 05, 2020 7:23:55 PM RM2Server.RM2ASServer createPlayerAccount
 INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
-Aug 05, 2020 5:47:29 AM RM2Server.RM2ASServer playerSignIn
-INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 05, 2020 5:47:29 AM RM2Server.RM2ASServer playerSignIn
-INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
-Aug 05, 2020 5:47:33 AM RM2Server.RM2ASServer getPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:47:33 AM RM2Server.RM2ASServer getPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 1 online , 0 offline. 
-Aug 05, 2020 5:47:37 AM RM2Server.RM2ASServer playerSignOut
-INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignOut() operation.
-Aug 05, 2020 5:47:37 AM RM2Server.RM2ASServer playerSignOut
-INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignOut() : Player sign out successfully
-Aug 05, 2020 5:47:41 AM RM2Server.RM2ASServer transferAccount
+Aug 05, 2020 7:23:56 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 05, 2020 7:23:56 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player already exists
+Aug 05, 2020 7:23:58 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 05, 2020 7:23:58 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player already exists
+Aug 05, 2020 7:23:59 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 05, 2020 7:23:59 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 05, 2020 7:24:01 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, start createPlayerAccount() operation.
+Aug 05, 2020 7:24:01 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, Result createPlayerAccount() : Player created successfully
+Aug 05, 2020 7:24:02 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:24:02 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
+Aug 05, 2020 7:24:04 PM RM2Server.RM2ASServer transferAccount
 INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
-Aug 05, 2020 5:47:41 AM RM2Server.RM2ASServer transferAccount
-INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) is transfered from 182.123.123.123 to 93.123.123.123
-Aug 05, 2020 5:47:45 AM RM2Server.RM2ASServer playerSignIn
-INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 05, 2020 5:47:45 AM RM2Server.RM2ASServer playerSignIn
-INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
-Aug 05, 2020 5:47:53 AM RM2Server.RM2ASServer getUDPPlayerStatus
+Aug 05, 2020 7:24:04 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) doesn't exists
+Aug 05, 2020 7:24:08 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start transferAccount() operation.
+Aug 05, 2020 7:24:08 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result transferAccount() : Player account (testuserdata2) is transfered from 182.123.123.123 to 93.123.123.123
+Aug 05, 2020 7:24:12 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:24:12 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata2) doesn't exists
+Aug 05, 2020 7:24:16 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 05, 2020 7:24:16 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 05, 2020 7:24:20 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, start createPlayerAccount() operation.
+Aug 05, 2020 7:24:20 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, Result createPlayerAccount() : Player already exists
+Aug 05, 2020 7:24:24 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:24:24 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) doesn't exists
+Aug 05, 2020 7:24:28 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
+Aug 05, 2020 7:24:28 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) doesn't exists
+Aug 05, 2020 7:24:32 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start transferAccount() operation.
+Aug 05, 2020 7:24:32 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result transferAccount() : Player account is not transfered
+Aug 05, 2020 7:24:36 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:24:36 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata2) is suspended
+Aug 05, 2020 7:24:40 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 05, 2020 7:24:40 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 05, 2020 7:24:44 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, start createPlayerAccount() operation.
+Aug 05, 2020 7:24:44 PM RM2Server.RM2ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, Result createPlayerAccount() : Player already exists
+Aug 05, 2020 7:24:48 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:24:48 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) doesn't exists
+Aug 05, 2020 7:24:52 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
+Aug 05, 2020 7:24:52 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) doesn't exists
+Aug 05, 2020 7:24:56 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start transferAccount() operation.
+Aug 05, 2020 7:24:56 PM RM2Server.RM2ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result transferAccount() : Player account is not transfered
+Aug 05, 2020 7:25:00 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 05, 2020 7:25:00 PM RM2Server.RM2ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata2) is suspended
+
+Aug 08, 2020 3:03:21 AM RM2Server.RM2ASServer serverConnection
+INFO: Asian Server Started
+Aug 08, 2020 3:04:27 AM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 08, 2020 3:04:27 AM RM2Server.RM2ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
+Aug 08, 2020 3:05:11 AM RM2Server.RM2ASServer getUDPPlayerStatus
 INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:47:53 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
-Aug 05, 2020 5:48:05 AM RM2Server.RM2ASServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 05, 2020 5:48:05 AM RM2Server.RM2ASServer getUDPPlayerStatus
+Aug 08, 2020 3:05:11 AM RM2Server.RM2ASServer getUDPPlayerStatus
 INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 0 offline. 
