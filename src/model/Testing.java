@@ -38,41 +38,41 @@ public class Testing extends Thread {
 
 		Testing t = new Testing();
 		
-//		System.out.println("--------------------------- Basic Test Cases ---------------------------\n");
-//		System.out.println("Test case detail");
-//		System.out.println("----------------");
-//		System.out.println("Username : testuserdata1");
-//		System.out.println("Password : testuserdata1");
-//		System.out.println("Old IP : 182.123.123.123 (Asian)");
-//		System.out.println("New IP : 93.123.123.123 (Europe)\n");
-//
-//		System.out.println("\nTest 1 : Create player account with 182.123.123.123 (Asian) Server");
-//		t.create();
-//		System.out.println("\nTest 2 : Sign in player account in 182.123.123.123 (Asian) Server");
-//		t.signin();
-//		System.out.println("\nTest 3 : Get player status");
-//		t.getplayerstatus();
-//		System.out.println("\nTest 4 : Sign out player account from 182.123.123.123 (Asian) Server");
-//		t.signout();
-//		System.out.println("\nTest 5 : Transfer player account 182.123.123.123 (Asian) to 93.123.123.123 (Europe) Server");
-//		t.transferaccount();
-//		System.out.println("\nTest 6 : Try Sign in player account into old Server (182.123.123.123 Asian) after transferting");
-//		t.signin();
-//		System.out.println("\nTest 7 : Sign in player account into new Server (93.123.123.123 Europe) after transferting");
-//		t.signinagain();
-//		System.out.println("\nTest 8 : Get player status");
-//		t.getplayerstatusagain();
-//		System.out.println("\nTest 9 : Suspend player account from 93.123.123.123 (Europe) Server");
-//		t.suspendaccount();
-//		System.out.println("\nTest 10 : Try Sign in player account after suspended in 93.123.123.123 (Europe) Server");
-//		t.signinagain();
-//		System.out.println("\nTest 11 : Get player status");
-//		t.getplayerstatusagain();
-//		System.out.println();
-//		
+		System.out.println("--------------------------- Basic Test Cases ---------------------------\n");
+		System.out.println("Test case detail");
+		System.out.println("----------------");
+		System.out.println("Username : testuserdata1");
+		System.out.println("Password : testuserdata1");
+		System.out.println("Old IP : 182.123.123.123 (Asian)");
+		System.out.println("New IP : 93.123.123.123 (Europe)\n");
+
+		System.out.println("\nTest 1 : Create player account with 182.123.123.123 (Asian) Server");
+		t.create();
+		System.out.println("\nTest 2 : Sign in player account in 182.123.123.123 (Asian) Server");
+		t.signin();
+		System.out.println("\nTest 3 : Get player status");
+		t.getplayerstatus();
+		System.out.println("\nTest 4 : Sign out player account from 182.123.123.123 (Asian) Server");
+		t.signout();
+		System.out.println("\nTest 5 : Transfer player account 182.123.123.123 (Asian) to 93.123.123.123 (Europe) Server");
+		t.transferaccount();
+		System.out.println("\nTest 6 : Try Sign in player account into old Server (182.123.123.123 Asian) after transferting");
+		t.signin();
+		System.out.println("\nTest 7 : Sign in player account into new Server (93.123.123.123 Europe) after transferting");
+		t.signinagain();
+		System.out.println("\nTest 8 : Get player status");
+		t.getplayerstatusagain();
+		System.out.println("\nTest 9 : Suspend player account from 93.123.123.123 (Europe) Server");
+		t.suspendaccount();
+		System.out.println("\nTest 10 : Try Sign in player account after suspended in 93.123.123.123 (Europe) Server");
+		t.signinagain();
+		System.out.println("\nTest 11 : Get player status");
+		t.getplayerstatusagain();
+		System.out.println();
+		
 		System.out.println("\n--------------------------- Advanced Test Cases ---------------------------\n");
 		
-		for(int i=0; i<3; i++) {
+		for(int i=0; i<2; i++) {
 			new Testing().start();
 		}
 					
