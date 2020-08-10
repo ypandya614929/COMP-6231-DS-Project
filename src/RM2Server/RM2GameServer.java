@@ -69,16 +69,6 @@ public class RM2GameServer {
 	
 	public RM2GameServer(boolean is_leader) {
 		
-//		try {
-//			writer = new PrintWriter("logs/Testing.txt", "UTF-8");
-//		} catch (FileNotFoundException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		} catch (UnsupportedEncodingException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		
 		try {
 			
 			rm2_eu_obj = new RM2EUServer();
@@ -86,6 +76,20 @@ public class RM2GameServer {
 			rm2_na_obj = new RM2NAServer();
 			
 			if (is_leader) {
+				
+				try {
+					File file = new File("logs/Testing.txt");
+			        try {
+			        	file.delete();
+			        } catch (Exception e) {}
+					writer = new PrintWriter("logs/Testing.txt", "UTF-8");
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (UnsupportedEncodingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				Runnable t1 = () -> {
 					startLeader();
@@ -294,8 +298,10 @@ public class RM2GameServer {
 					response = response.split("#")[0].trim();
 					logger.info("##### " + no);
 					logger.info("Leader Response No : " + no + ", Data : " + response);
-//					writer.println("Leader Response No : " + no + ", Data : " + response);
 					new DatagramSocket().send(new DatagramPacket(response.getBytes(), response.length(), ia, Constants.FRONTEND_RESPONSE_PORT));
+					if (writer != null) {
+						writer.println("Leader Response No : " + no + ", Data : " + response);
+					}
 					response = "";
 					RM1_response = "";
 					RM2_response = "";

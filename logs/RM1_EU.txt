@@ -1,90 +1,84 @@
-Aug 08, 2020 7:53:13 PM RM1Server.RM1EUServer addLog
+Aug 10, 2020 1:56:18 PM RM1Server.RM1EUServer addLog
+INFO: Aug 10, 2020 1:51:29 PM RM1Server.RM1EUServer addLog
 INFO: 
-Aug 08, 2020 7:53:13 PM RM1Server.RM1EUServer serverConnection
+Aug 10, 2020 1:51:29 PM RM1Server.RM1EUServer serverConnection
 INFO: European Server Started
-Aug 08, 2020 7:53:30 PM RM1Server.RM1EUServer sendserverData
-INFO: == Sending Data of Europe from RM1 to RM3 ==
-Aug 08, 2020 7:53:33 PM RM1Server.RM1EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:53:33 PM RM1Server.RM1EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Aug 08, 2020 7:53:41 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:41 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:49 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 08, 2020 7:53:49 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
-Aug 08, 2020 7:53:53 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:53:53 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 1 online , 0 offline. 
-Aug 08, 2020 7:53:57 PM RM1Server.RM1EUServer suspendAccount
-INFO: IP : 93.123.123.123, username : Admin, start suspendAccount() operation.
-Aug 08, 2020 7:53:57 PM RM1Server.RM1EUServer suspendAccount
-INFO: IP : 93.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
-Aug 08, 2020 7:54:01 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 08, 2020 7:54:01 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
-Aug 08, 2020 7:54:05 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:54:05 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 0 offline. 
-Aug 08, 2020 7:54:29 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:29 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:54:53 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:51:39 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.111.111.112, username : testuser10, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:53 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:51:39 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:54:57 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:51:41 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:57 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:51:41 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:55:01 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.111.333.112, username : testuser12, start createPlayerAccount() operation.
-Aug 08, 2020 7:55:01 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.111.333.112, username : testuser12, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:55:05 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.444.111.110, username : testuser13, start createPlayerAccount() operation.
-Aug 08, 2020 7:55:05 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.444.111.110, username : testuser13, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:57:20 PM RM1Server.RM1EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:20 PM RM1Server.RM1EUServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 5 offline. 
-Aug 08, 2020 7:57:28 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
-Aug 08, 2020 7:57:28 PM RM1Server.RM1EUServer createPlayerAccount
-INFO: IP : 93.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:57:36 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 08, 2020 7:57:36 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
-Aug 08, 2020 7:57:40 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:40 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 1 online , 5 offline. 
-Aug 08, 2020 7:57:44 PM RM1Server.RM1EUServer suspendAccount
-INFO: IP : 93.123.123.123, username : Admin, start suspendAccount() operation.
-Aug 08, 2020 7:57:44 PM RM1Server.RM1EUServer suspendAccount
-INFO: IP : 93.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
-Aug 08, 2020 7:57:48 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
-Aug 08, 2020 7:57:48 PM RM1Server.RM1EUServer playerSignIn
-INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
-Aug 08, 2020 7:57:52 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:52 PM RM1Server.RM1EUServer getPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 5 offline. 
-Aug 08, 2020 7:58:20 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:53:07 PM RM1Server.RM1EUServer sendserverData
+INFO: == Sending Data of Europe from RM1 to RM3 ==
+Aug 10, 2020 1:53:30 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
-Aug 08, 2020 7:58:20 PM RM1Server.RM1EUServer createPlayerAccount
+Aug 10, 2020 1:53:30 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:53:54 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 10, 2020 1:53:54 PM RM1Server.RM1EUServer createPlayerAccount
 INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player already exists
-Aug 08, 2020 7:59:03 PM RM1Server.RM1EUServer getUDPPlayerStatus
+
+Aug 10, 2020 1:56:18 PM RM1Server.RM1EUServer serverConnection
+INFO: European Server Started
+Aug 10, 2020 1:56:26 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, start createPlayerAccount() operation.
+Aug 10, 2020 1:56:26 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:56:27 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+Aug 10, 2020 1:56:27 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:57:06 PM RM1Server.RM1EUServer getUDPPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:59:03 PM RM1Server.RM1EUServer getUDPPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 5 offline. 
+Aug 10, 2020 1:57:06 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 10, 2020 1:57:07 PM RM1Server.RM1EUServer sendserverData
+INFO: == Sending Data of Europe from RM1 to RM3 ==
+Aug 10, 2020 1:57:28 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:57:28 PM RM1Server.RM1EUServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 10, 2020 1:57:36 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 10, 2020 1:57:36 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:57:44 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 10, 2020 1:57:44 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
+Aug 10, 2020 1:57:48 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:57:48 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 1 online , 2 offline. 
+Aug 10, 2020 1:57:52 PM RM1Server.RM1EUServer suspendAccount
+INFO: IP : 93.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 10, 2020 1:57:52 PM RM1Server.RM1EUServer suspendAccount
+INFO: IP : 93.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
+Aug 10, 2020 1:57:56 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 10, 2020 1:57:56 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
+Aug 10, 2020 1:58:00 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:58:00 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 10, 2020 1:59:46 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 10, 2020 1:59:46 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 2:00:10 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 10, 2020 2:00:10 PM RM1Server.RM1EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player already exists
+Aug 10, 2020 2:01:10 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 2:01:10 PM RM1Server.RM1EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 3 offline. 
+Aug 10, 2020 2:01:51 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : ypandya, start playerSignIn() operation.
+Aug 10, 2020 2:01:51 PM RM1Server.RM1EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : ypandya, Result playerSignIn() : Player account (ypandya) doesn't exists

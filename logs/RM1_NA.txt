@@ -1,70 +1,48 @@
-Aug 08, 2020 7:53:13 PM RM1Server.RM1NAServer addLog
+Aug 10, 2020 1:56:18 PM RM1Server.RM1NAServer addLog
+INFO: Aug 10, 2020 1:51:29 PM RM1Server.RM1NAServer addLog
 INFO: 
-Aug 08, 2020 7:53:13 PM RM1Server.RM1NAServer serverConnection
+Aug 10, 2020 1:51:29 PM RM1Server.RM1NAServer serverConnection
 INFO: North American Server Started
-Aug 08, 2020 7:53:19 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.111.111, username : testuser1, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:19 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.111.111, username : testuser1, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:21 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.112.112.112, username : testuser2, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:21 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.112.112.112, username : testuser2, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:22 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.113.113.113, username : testuser3, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:22 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.113.113.113, username : testuser3, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:24 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.114.114.114, username : testuser4, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:24 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.114.114.114, username : testuser4, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:25 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.115.115.115, username : testuser5, start createPlayerAccount() operation.
-Aug 08, 2020 7:53:25 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.115.115.115, username : testuser5, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:53:30 PM RM1Server.RM1NAServer sendserverData
+Aug 10, 2020 1:51:36 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, start createPlayerAccount() operation.
+Aug 10, 2020 1:51:36 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:51:38 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, start createPlayerAccount() operation.
+Aug 10, 2020 1:51:38 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:53:07 PM RM1Server.RM1NAServer sendserverData
 INFO: == Sending Data of North America from RM1 to RM3 ==
-Aug 08, 2020 7:53:33 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:53:33 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 5 offline. 
-Aug 08, 2020 7:53:53 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:53:53 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 5 offline. 
-Aug 08, 2020 7:54:05 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:54:05 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 5 offline. 
-Aug 08, 2020 7:54:37 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.110.111.112, username : testuser6, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:37 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.110.111.112, username : testuser6, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:54:41 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.122.113, username : testuser7, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:41 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.122.113, username : testuser7, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:54:45 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.222.333.114, username : testuser8, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:45 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.222.333.114, username : testuser8, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:54:49 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.111.112, username : testuser9, start createPlayerAccount() operation.
-Aug 08, 2020 7:54:49 PM RM1Server.RM1NAServer createPlayerAccount
-INFO: IP : 132.111.111.112, username : testuser9, Result createPlayerAccount() : Player created successfully
-Aug 08, 2020 7:57:20 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:20 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 9 offline. 
-Aug 08, 2020 7:57:40 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:40 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 9 offline. 
-Aug 08, 2020 7:57:52 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:57:52 PM RM1Server.RM1NAServer getUDPPlayerStatus
-INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 9 offline. 
-Aug 08, 2020 7:59:03 PM RM1Server.RM1NAServer getPlayerStatus
+
+Aug 10, 2020 1:56:18 PM RM1Server.RM1NAServer serverConnection
+INFO: North American Server Started
+Aug 10, 2020 1:56:23 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, start createPlayerAccount() operation.
+Aug 10, 2020 1:56:23 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:56:24 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, start createPlayerAccount() operation.
+Aug 10, 2020 1:56:24 PM RM1Server.RM1NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, Result createPlayerAccount() : Player created successfully
+Aug 10, 2020 1:57:06 PM RM1Server.RM1NAServer getPlayerStatus
 INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
-Aug 08, 2020 7:59:03 PM RM1Server.RM1NAServer getPlayerStatus
-INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 9 offline. 
+Aug 10, 2020 1:57:06 PM RM1Server.RM1NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 10, 2020 1:57:07 PM RM1Server.RM1NAServer sendserverData
+INFO: == Sending Data of North America from RM1 to RM3 ==
+Aug 10, 2020 1:57:28 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:57:28 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 10, 2020 1:57:48 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:57:48 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 10, 2020 1:58:00 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 1:58:00 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 10, 2020 2:01:10 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 10, 2020 2:01:10 PM RM1Server.RM1NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 

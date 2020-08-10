@@ -3,15 +3,7 @@
 //https://www.geeksforgeeks.org/synchronized-in-java/
 package model;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Random;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import org.omg.CORBA.ORB;
 import org.omg.CORBA.ORBPackage.InvalidName;
@@ -69,12 +61,6 @@ public class Testing extends Thread {
 		System.out.println("\nTest 11 : Get player status");
 		t.getplayerstatusagain();
 		System.out.println();
-		
-		System.out.println("\n--------------------------- Advanced Test Cases ---------------------------\n");
-		
-		for(int i=0; i<2; i++) {
-			new Testing().start();
-		}
 					
 	}
 	
@@ -121,43 +107,6 @@ public class Testing extends Thread {
 	public static FrontendInterface createAdminObject(String ip) throws NotFound, CannotProceed, InvalidName, org.omg.CosNaming.NamingContextPackage.InvalidName  {
 	
 			return FrontendInterfaceHelper.narrow(ncRef.resolve_str("FrontEnd"));
-	}
-	
-	public void run() {
-		
-		try {
-			Thread.sleep((long)(Math.random() * 1000));
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-		try {
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : createPlayerAccount() , " + " Username : testuserdata1");
-			createAdminObject("182.123.123.123").createPlayerAccount("testdata1", "userdata1", "24", "testuserdata1", "testuserdata1", "182.123.123.123");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : createPlayerAccount() , " + " Username : testuserdata2");
-			createAdminObject("182.123.123.123").createPlayerAccount("testdata2", "userdata2", "24", "testuserdata2", "testuserdata2", "182.123.123.123");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : createPlayerAccount() , " + " Username : testuserdata3"); 
-			createAdminObject("182.123.123.123").createPlayerAccount("testdata3", "userdata3", "24", "testuserdata3", "testuserdata3", "182.123.123.123");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : suspendAccount(), Username : testuserdata1");
-			createAdminObject("182.123.123.123").suspendAccount("Admin", "Admin", "182.123.123.123", "testuserdata1");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : transferAccount(), Username : testuserdata1");
-			createAdminObject("182.123.123.123").transferAccount("testuserdata1", "testuserdata1", "182.123.123.123", "93.123.123.123");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : transferAccount(), Username : testuserdata2");
-			createAdminObject("182.123.123.123").transferAccount("testuserdata2", "testuserdata2", "182.123.123.123", "93.123.123.123");
-			c++;
-			System.out.println("Req Id " + c + ", Thread " + Thread.currentThread().getId() + " Method : suspendAccount(), Username : testuserdata2");
-			createAdminObject("182.123.123.123").suspendAccount("Admin", "Admin", "182.123.123.123", "testuserdata2");
-			
-		} catch (Exception e) {
-			System.out.println("Exception is caught");
-		}
 	}
 	
 }
