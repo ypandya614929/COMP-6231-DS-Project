@@ -1,4 +1,5 @@
-Aug 10, 2020 1:56:18 PM RM3Server.RM3ASServer addLog
+Aug 12, 2020 2:30:52 AM RM3Server.RM3ASServer addLog
+INFO: Aug 10, 2020 1:56:18 PM RM3Server.RM3ASServer addLog
 INFO: Aug 10, 2020 1:51:29 PM RM3Server.RM3ASServer addLog
 INFO: 
 Aug 10, 2020 1:51:29 PM RM3Server.RM3ASServer serverConnection
@@ -190,3 +191,134 @@ Aug 10, 2020 2:01:32 PM RM3Server.RM3ASServer suspendAccount
 INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
 Aug 10, 2020 2:01:32 PM RM3Server.RM3ASServer suspendAccount
 INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (ypandya) doesn't exists
+
+Aug 12, 2020 2:30:52 AM RM3Server.RM3ASServer serverConnection
+INFO: Asian Server Started
+Aug 12, 2020 2:31:05 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser14, start createPlayerAccount() operation.
+Aug 12, 2020 2:31:05 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser14, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:31:07 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.110.111.112, username : testuser15, start createPlayerAccount() operation.
+Aug 12, 2020 2:31:07 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.110.111.112, username : testuser15, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:31:39 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:31:39 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:31:41 AM RM3Server.RM3ASServer updateserverData
+INFO: == Started Asia Server Restoring. ==
+Aug 12, 2020 2:31:41 AM RM3Server.RM3ASServer updateserverData
+INFO: == Asia Server Restored. ==
+Aug 12, 2020 2:32:40 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.321.321.312, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:32:40 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.321.321.312, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:33:13 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:33:13 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:34:05 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Aug 12, 2020 2:34:05 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:34:19 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:34:19 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 3 offline. 
+Aug 12, 2020 2:34:38 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 2:34:38 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (ypandya) is suspended
+Aug 12, 2020 2:34:50 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:34:50 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:35:11 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 12, 2020 2:35:11 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:35:15 AM RM3Server.RM3ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 12, 2020 2:35:15 AM RM3Server.RM3ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
+Aug 12, 2020 2:35:19 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:19 AM RM3Server.RM3ASServer getPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 1 online , 2 offline. 
+Aug 12, 2020 2:35:23 AM RM3Server.RM3ASServer playerSignOut
+INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignOut() operation.
+Aug 12, 2020 2:35:23 AM RM3Server.RM3ASServer playerSignOut
+INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignOut() : Player sign out successfully
+Aug 12, 2020 2:35:27 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
+Aug 12, 2020 2:35:27 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) is transfered from 182.123.123.123 to 93.123.123.123
+Aug 12, 2020 2:35:31 AM RM3Server.RM3ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 12, 2020 2:35:31 AM RM3Server.RM3ASServer playerSignIn
+INFO: IP : 182.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
+Aug 12, 2020 2:35:39 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:39 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:35:51 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:51 AM RM3Server.RM3ASServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Asian : 0 online , 2 offline. 
+Aug 12, 2020 2:37:15 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:15 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:37:19 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:19 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player already exists
+Aug 12, 2020 2:37:23 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:23 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:37:27 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:27 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:37:31 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 2:37:31 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
+Aug 12, 2020 2:37:35 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
+Aug 12, 2020 2:37:35 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) doesn't exists
+Aug 12, 2020 2:37:40 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start transferAccount() operation.
+Aug 12, 2020 2:37:40 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result transferAccount() : Player account (testuserdata2) is transfered from 182.123.123.123 to 93.123.123.123
+Aug 12, 2020 2:37:44 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 2:37:44 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata2) doesn't exists
+Aug 12, 2020 2:37:48 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:48 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:37:52 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, start createPlayerAccount() operation.
+Aug 12, 2020 2:37:52 AM RM3Server.RM3ASServer createPlayerAccount
+INFO: IP : 182.123.123.123, username : testuserdata3, Result createPlayerAccount() : Player already exists
+Aug 12, 2020 2:37:56 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 2:37:56 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) doesn't exists
+Aug 12, 2020 2:38:00 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, start transferAccount() operation.
+Aug 12, 2020 2:38:00 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata1, Result transferAccount() : Player account (testuserdata1) doesn't exists
+Aug 12, 2020 2:38:04 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, start transferAccount() operation.
+Aug 12, 2020 2:38:04 AM RM3Server.RM3ASServer transferAccount
+INFO: IP : 182.123.123.123, username : testuserdata2, Result transferAccount() : Player account is not transfered
+Aug 12, 2020 2:38:08 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 2:38:08 AM RM3Server.RM3ASServer suspendAccount
+INFO: IP : 182.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata2) is suspended

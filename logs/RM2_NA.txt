@@ -1,4 +1,5 @@
-Aug 10, 2020 1:56:18 PM RM2Server.RM2NAServer addLog
+Aug 12, 2020 2:30:52 AM RM2Server.RM2NAServer addLog
+INFO: Aug 10, 2020 1:56:18 PM RM2Server.RM2NAServer addLog
 INFO: Aug 10, 2020 1:51:29 PM RM2Server.RM2NAServer addLog
 INFO: 
 Aug 10, 2020 1:51:29 PM RM2Server.RM2NAServer serverConnection
@@ -41,4 +42,47 @@ INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North Am
 Aug 10, 2020 2:01:10 PM RM2Server.RM2NAServer getUDPPlayerStatus
 INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
 Aug 10, 2020 2:01:10 PM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+
+Aug 12, 2020 2:30:52 AM RM2Server.RM2NAServer serverConnection
+INFO: North American Server Started
+Aug 12, 2020 2:30:59 AM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, start createPlayerAccount() operation.
+Aug 12, 2020 2:30:59 AM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.111.111.111, username : testuser8, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:31:01 AM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, start createPlayerAccount() operation.
+Aug 12, 2020 2:31:01 AM RM2Server.RM2NAServer createPlayerAccount
+INFO: IP : 132.112.112.112, username : testuser9, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 2:31:39 AM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:31:39 AM RM2Server.RM2NAServer getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:32:40 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.321.321.312, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:32:40 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.321.321.312, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:33:13 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:33:13 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:34:19 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:34:19 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:34:50 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:34:50 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:35:19 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:19 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:35:39 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:39 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
+Aug 12, 2020 2:35:51 AM RM2Server.RM2NAServer getUDPPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 2:35:51 AM RM2Server.RM2NAServer getUDPPlayerStatus
 INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : North American : 0 online , 2 offline. 
