@@ -1,0 +1,4 @@
+Aug 12, 2020 3:34:46 PM client.AdministratorClient addLog
+INFO: 
+Aug 12, 2020 3:34:46 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 132.123.123.123, username : Admiin, start getPlayerStatus() operation.

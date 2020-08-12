@@ -91,6 +91,7 @@ public class RM3EUServer {
 	 * Constructor
 	 */
 	public RM3EUServer() {
+		addLog("logs/RM3_EU.txt", "RM3_EU");
 		this.adminserverData = new ConcurrentHashMap<>();
 		this.playerserverData = new ConcurrentHashMap<>();
 		Runnable eu = () -> {
@@ -481,7 +482,6 @@ public class RM3EUServer {
 	 * @param port port of the RM1Server that is running on
 	 */
 	public void serverConnection(int port) {
-		addLog("logs/RM3_EU.txt", "RM3_EU");
 		logger.info("European Server Started");
 		DatagramSocket ds = null;
 

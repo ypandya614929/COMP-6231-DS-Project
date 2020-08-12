@@ -88,6 +88,7 @@ public class RM1NAServer {
 	 * Constructor
 	 */
 	public RM1NAServer() {
+		addLog("logs/RM1_NA.txt", "RM1_NA");
 		this.adminserverData = new ConcurrentHashMap<>();
 		this.playerserverData = new ConcurrentHashMap<>();
 		Runnable na = () -> {
@@ -478,7 +479,6 @@ public class RM1NAServer {
 	 * @param port port of the RM1Server that is running on
 	 */
 	public void serverConnection(int port) {
-		addLog("logs/RM1_NA.txt", "RM1_NA");
 		logger.info("North American Server Started");
 		DatagramSocket ds = null;
 

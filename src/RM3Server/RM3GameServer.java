@@ -170,6 +170,13 @@ public class RM3GameServer {
 			    
 			}				   
 		    
+			rm3_eu_obj.createPlayerAccount("Test", "User10", "21", "testuser10", "testuser10", "93.111.111.112");
+			rm3_eu_obj.createPlayerAccount("Test", "User11", "22", "testuser11", "testuser11", "93.222.111.113");
+			rm3_as_obj.createPlayerAccount("Test", "User14", "25", "testuser14", "testuser14", "182.111.111.112");
+			rm3_as_obj.createPlayerAccount("Test", "User15", "26", "testuser15", "testuser15", "182.110.111.112");
+			rm3_na_obj.createPlayerAccount("Test", "User8", "12", "testuser8", "testuser8", "132.111.111.111");
+			rm3_na_obj.createPlayerAccount("Test", "User9", "13", "testuser9", "testuser9", "132.112.112.112");
+			
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 		}

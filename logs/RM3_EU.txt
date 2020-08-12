@@ -1,4 +1,8 @@
-Aug 12, 2020 2:30:52 AM RM3Server.RM3EUServer addLog
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer addLog
+INFO: Aug 12, 2020 3:42:50 PM RM3Server.RM3EUServer addLog
+INFO: Aug 12, 2020 3:36:12 PM RM3Server.RM3EUServer addLog
+INFO: Aug 12, 2020 3:34:02 PM RM3Server.RM3EUServer addLog
+INFO: Aug 12, 2020 2:30:52 AM RM3Server.RM3EUServer addLog
 INFO: Aug 10, 2020 1:56:18 PM RM3Server.RM3EUServer addLog
 INFO: Aug 10, 2020 1:51:29 PM RM3Server.RM3EUServer addLog
 INFO: 
@@ -177,4 +181,102 @@ INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount(
 Aug 12, 2020 2:38:04 AM RM3Server.RM3EUServer createPlayerAccount
 INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
 Aug 12, 2020 2:38:04 AM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player already exists
+
+Aug 12, 2020 3:34:02 PM RM3Server.RM3EUServer serverConnection
+INFO: European Server Started
+Aug 12, 2020 3:34:02 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:34:02 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+Aug 12, 2020 3:34:02 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
+
+Aug 12, 2020 3:36:12 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:36:12 PM RM3Server.RM3EUServer serverConnection
+INFO: European Server Started
+Aug 12, 2020 3:36:12 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+Aug 12, 2020 3:36:12 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
+
+Aug 12, 2020 3:42:50 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:42:50 PM RM3Server.RM3EUServer serverConnection
+INFO: European Server Started
+Aug 12, 2020 3:42:50 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+Aug 12, 2020 3:42:50 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
+
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer serverConnection
+INFO: European Server Started
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, start createPlayerAccount() operation.
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+Aug 12, 2020 3:48:23 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:48:47 PM RM3Server.RM3EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:48:47 PM RM3Server.RM3EUServer getUDPPlayerStatus
+INFO: IP : 132.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:49:14 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:49:14 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:52:13 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:52:13 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:52:45 PM RM3Server.RM3EUServer updateserverData
+INFO: == Started Europe Server Restoring. ==
+Aug 12, 2020 3:52:45 PM RM3Server.RM3EUServer updateserverData
+INFO: == Europe Server Restored. ==
+Aug 12, 2020 3:53:22 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:53:22 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:53:45 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:53:45 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:54:07 PM RM3Server.RM3EUServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:54:07 PM RM3Server.RM3EUServer getUDPPlayerStatus
+INFO: IP : 182.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:54:15 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata1, start createPlayerAccount() operation.
+Aug 12, 2020 3:54:15 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata1, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:54:23 PM RM3Server.RM3EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 12, 2020 3:54:23 PM RM3Server.RM3EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player sign in successfully
+Aug 12, 2020 3:54:27 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:54:27 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 1 online , 2 offline. 
+Aug 12, 2020 3:54:31 PM RM3Server.RM3EUServer suspendAccount
+INFO: IP : 93.123.123.123, username : Admin, start suspendAccount() operation.
+Aug 12, 2020 3:54:31 PM RM3Server.RM3EUServer suspendAccount
+INFO: IP : 93.123.123.123, username : Admin, Result suspendAccount() : Player account (testuserdata1) is suspended
+Aug 12, 2020 3:54:35 PM RM3Server.RM3EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, start playerSignIn() operation.
+Aug 12, 2020 3:54:35 PM RM3Server.RM3EUServer playerSignIn
+INFO: IP : 93.123.123.123, username : testuserdata1, Result playerSignIn() : Player account (testuserdata1) doesn't exists
+Aug 12, 2020 3:54:39 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Aug 12, 2020 3:54:39 PM RM3Server.RM3EUServer getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : Europe : 0 online , 2 offline. 
+Aug 12, 2020 3:55:57 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 12, 2020 3:55:57 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player created successfully
+Aug 12, 2020 3:56:21 PM RM3Server.RM3EUServer createPlayerAccount
+INFO: IP : 93.123.123.123, username : testuserdata2, start createPlayerAccount() operation.
+Aug 12, 2020 3:56:21 PM RM3Server.RM3EUServer createPlayerAccount
 INFO: IP : 93.123.123.123, username : testuserdata2, Result createPlayerAccount() : Player already exists

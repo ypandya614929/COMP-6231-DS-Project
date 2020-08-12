@@ -90,6 +90,7 @@ public class RM3ASServer {
 	 * Constructor
 	 */
 	public RM3ASServer() {
+		addLog("logs/RM3_AS.txt", "RM3_AS");
 		this.adminserverData = new ConcurrentHashMap<>();
 		this.playerserverData = new ConcurrentHashMap<>();
 		Runnable as = () -> {
@@ -102,7 +103,6 @@ public class RM3ASServer {
 		};
 		Thread t1 = new Thread(usd);
 		t1.start();
-		
 	}
 
 	/**
@@ -481,7 +481,6 @@ public class RM3ASServer {
 	 * @param port port of the RM1Server that is running on
 	 */
 	public void serverConnection(int port) {
-		addLog("logs/RM3_AS.txt", "RM3_AS");
 		logger.info("Asian Server Started");
 		DatagramSocket ds = null;
 
